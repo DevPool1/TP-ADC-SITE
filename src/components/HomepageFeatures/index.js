@@ -4,32 +4,32 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Git Push Vegetais',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Adiciona saúde ao teu repositório corporal. A nossa app ajuda-te a fazer 
+        o <i>commit</i> diário de vitaminas e nutrientes essenciais.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Git Ignore Gorduras',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Filtra o que não interessa. Define regras no teu ficheiro 
+        <code>.dietignore</code> e mantém o foco numa alimentação limpa e eficiente.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Pull Request de Receitas',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Colabora com a comunidade! Partilha as tuas receitas, faz <i>fork</i> 
+        de planos de nutrição e melhora a tua versão a cada dia.
       </>
     ),
   },
