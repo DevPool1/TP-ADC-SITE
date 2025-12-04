@@ -57,14 +57,32 @@ function Feature({ imgSrc, title, description }) {
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
+    <>
+      <section className={styles.features}>
+        <div className="container">
+          <div className="row">
+            {FeatureList.map((props, idx) => (
+              <Feature key={idx} {...props} />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section className={styles.features}>
+        <div className="container">
+          <Heading as="h2" className="text--center margin-bottom--md">Galeria da Aplicação</Heading>
+          <div className="row">
+            {[1, 2, 3, 4].map((num) => (
+              <div key={num} className="col col--3 margin-bottom--md">
+                <img
+                  src={require(`@site/static/img/demo/demo-${num}.png`).default}
+                  alt={`Demo ${num}`}
+                  style={{ borderRadius: '8px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
