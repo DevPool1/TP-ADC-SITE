@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Git Push Vegetais',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/undraw_eating-pasta_96tb.svg').default,
     description: (
       <>
         Adiciona saúde ao teu repositório corporal. A nossa app ajuda-te a fazer 
@@ -15,7 +15,7 @@ const FeatureList = [
   },
   {
     title: 'Git Ignore Gorduras',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/undraw_cancel_7zdh.svg').default,
     description: (
       <>
         Filtra o que não interessa. Define regras no teu ficheiro 
@@ -25,7 +25,7 @@ const FeatureList = [
   },
   {
     title: 'Pull Request de Receitas',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/undraw_cooking_j2pu.svg').default,
     description: (
       <>
         Colabora com a comunidade! Partilha as tuas receitas, faz <i>fork</i> 
