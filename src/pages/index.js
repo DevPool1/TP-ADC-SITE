@@ -16,11 +16,19 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__description">
+          A plataforma completa para gestão nutricional e bem-estar.
+        </p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
+            className="button button--secondary button--lg margin-right--md"
             to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            Começar Agora 🚀
+          </Link>
+          <Link
+            className="button button--outline button--secondary button--lg"
+            to="https://github.com/Grupo-ADC/ADC_TP_NUTRICAO">
+            Ver no GitHub 💻
           </Link>
         </div>
       </div>
