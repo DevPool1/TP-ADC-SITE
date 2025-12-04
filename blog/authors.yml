@@ -1,25 +1,23 @@
-yangshun:
-  name: Yangshun Tay
-  title: Ex-Meta Staff Engineer, Co-founder GreatFrontEnd
-  url: https://linkedin.com/in/yangshun
-  image_url: https://github.com/yangshun.png
-  page: true
-  socials:
-    x: yangshunz
-    linkedin: yangshun
-    github: yangshun
-    newsletter: https://www.greatfrontend.com
+alex:
+  name: Alexandru Tutunaru
+  title: Full-stack Developer
+  url: https://github.com/ATutunaru
+  image_url: https://github.com/ATutunaru.png
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
-  socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+andre:
+  name: André Nunes
+  title: UI/UX Designer & Frontend
+  url: https://github.com/andrevnunes
+  image_url: https://github.com/andrevnunes.png
+
+cosmin:
+  name: Cosmin Ciocan
+  title: Database Specialist
+  url: https://github.com/cosmin-fx
+  image_url: https://github.com/cosminciocan.png
+
+firmino:
+  name: Firmino Santos
+  title: Backend Developer
+  url: https://github.com/
+  image_url: https://github.com/firminosantos.png
