@@ -97,6 +97,7 @@ const config = {
           },
           { to: '/about', label: 'Sobre a Equipa', position: 'left' },
           { to: '/blog', label: 'Blog', position: 'left' },
+          { to: '/pricing', label: 'Pricing', position: 'left' },
           {
             href: 'https://github.com/Grupo-ADC/ADC_TP_NUTRICAO',
             label: 'GitHub',
