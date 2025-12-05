@@ -1,5 +1,5 @@
 import React from 'react';
-
+import styles from './PricingCard.module.css';
 
 export default function PricingCard({ title, price, features }) {
   return (
