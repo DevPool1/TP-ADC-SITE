@@ -28,3 +28,54 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Pricing cards (used by src/pages/pricing.md) */
+.pricing-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.pricing-card {
+  background-color: #f8f8f8;
+  color: #0b1320;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.pricing-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+.pricing-card button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+.pricing-card button:hover {
+  background-color: #45a049;
+}
+
+/* Dark theme overrides for pricing cards */
+[data-theme='dark'] .pricing-card {
+  background-color: #122028; /* slightly lighter than page background */
+  color: #e6f3ef; /* light text for contrast */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+}
+[data-theme='dark'] .pricing-card button {
+  background-color: #2ea06a;
+}
+[data-theme='dark'] .pricing-card button:hover {
+  background-color: #27965f;
+}
