@@ -86,7 +86,7 @@ const config = {
         title: 'NutriApp',
         logo: {
           alt: 'NutriApp Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo2.png',
         },
         items: [
           {
