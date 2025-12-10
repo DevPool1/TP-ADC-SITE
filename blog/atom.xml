@@ -40,8 +40,8 @@ t</li>
             <name>Firmino Santos</name>
             <uri>https://github.com/</uri>
         </author>
-        <category label="devlog" term="devlog"/>
-        <category label="roadmap" term="roadmap"/>
-        <category label="lançamento" term="lançamento"/>
+        <category label="DevLog" term="DevLog"/>
+        <category label="Roadmap" term="Roadmap"/>
+        <category label="Lançamento" term="Lançamento"/>
     </entry>
 </feed>

@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunktp_adc_site=globalThis.webpackChunktp_adc_site||[]).push([[437],{2006:a=>{a.exports=JSON.parse('{"tags":[{"label":"devlog","permalink":"/TP-ADC-SITE/blog/tags/devlog","count":1},{"label":"roadmap","permalink":"/TP-ADC-SITE/blog/tags/roadmap","count":1},{"label":"lan\xe7amento","permalink":"/TP-ADC-SITE/blog/tags/lancamento","count":1}]}')}}]);
