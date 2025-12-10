@@ -20,14 +20,14 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://Grupo-ADC.github.io',
+  url: 'https://DevPool1.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/TP-ADC-SITE/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Grupo-ADC', // Usually your GitHub org/user name.
+  organizationName: 'DevPool1', // Usually your GitHub org/user name.
   projectName: 'TP-ADC-SITE', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -99,7 +99,7 @@ const config = {
           { to: '/blog', label: 'Blog', position: 'left' },
           { to: '/pricing', label: 'Pricing', position: 'left' },
           {
-            href: 'https://github.com/Grupo-ADC/TP-ADC-SITE',
+            href: 'https://github.com/DevPool1/TP-ADC-SITE',
             label: 'GitHub',
             position: 'right',
           },

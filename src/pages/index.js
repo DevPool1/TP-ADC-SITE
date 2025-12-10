@@ -27,7 +27,7 @@ function HomepageHeader() {
           </Link>
           <Link
             className="button button--outline button--secondary button--lg"
-            to="https://github.com/Grupo-ADC/ADC_TP_NUTRICAO">
+            to="https://github.com/DevPool1/TP-ADC-SITE">
             Ver no GitHub 💻
           </Link>
         </div>
