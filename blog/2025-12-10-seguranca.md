@@ -1,7 +1,7 @@
 ---
 slug: seguranca-passwords-hash
 title: 🔐 Segurança: Fazemos Hash de Passwords, não de Batatas
-authors: [andre, firmino]
+authors: [andre]
 tags: [backend, segurança, criptografia]
 date: 2025-12-06
 ---
@@ -22,3 +22,4 @@ Exemplo de como **NÃO** se deve guardar um utilizador:
 const user = { username: 'andre', password: 'minhapasswordsecreta' };
 // Se alguém ler a base de dados, lê a password imediatamente.
 db.save(user);
+
