@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://Grupo-ADC.github.io/TP-ADC-SITE/blog</id>
+    <id>https://DevPool1.github.io/TP-ADC-SITE/blog</id>
     <title>NutriApp Blog</title>
     <updated>2025-12-04T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://Grupo-ADC.github.io/TP-ADC-SITE/blog"/>
+    <link rel="alternate" href="https://DevPool1.github.io/TP-ADC-SITE/blog"/>
     <subtitle>NutriApp Blog</subtitle>
-    <icon>https://Grupo-ADC.github.io/TP-ADC-SITE/img/favicon.ico</icon>
+    <icon>https://DevPool1.github.io/TP-ADC-SITE/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[🥗 Hello World: O Início da Nutri App]]></title>
-        <id>https://Grupo-ADC.github.io/TP-ADC-SITE/blog/inicio-nutri-app</id>
-        <link href="https://Grupo-ADC.github.io/TP-ADC-SITE/blog/inicio-nutri-app"/>
+        <id>https://DevPool1.github.io/TP-ADC-SITE/blog/inicio-nutri-app</id>
+        <link href="https://DevPool1.github.io/TP-ADC-SITE/blog/inicio-nutri-app"/>
         <updated>2025-12-04T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Bem-vindos ao DevLog oficial da equipa Nutri App!]]></summary>
         <content type="html"><![CDATA[<p>Bem-vindos ao <strong>DevLog</strong> oficial da equipa Nutri App!
 A partir de hoje, vamos documentar a jornada de transformar código em saúde.</p>
 <p>O nosso lema é simples: <strong>Git Push Vegetais, Git Ignore Gorduras</strong>.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-o-que-estamos-a-construir">🚀 O que estamos a construir?<a href="https://grupo-adc.github.io/TP-ADC-SITE/blog/inicio-nutri-app#-o-que-estamos-a-construir" class="hash-link" aria-label="Direct link to 🚀 O que estamos a construir?" title="Direct link to 🚀 O que estamos a construir?" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-o-que-estamos-a-construir">🚀 O que estamos a construir?<a href="https://devpool1.github.io/TP-ADC-SITE/blog/inicio-nutri-app#-o-que-estamos-a-construir" class="hash-link" aria-label="Direct link to 🚀 O que estamos a construir?" title="Direct link to 🚀 O que estamos a construir?" translate="no">​</a></h3>
 <p>Estamos a desenvolver uma solução completa para gestão nutricional que inclui:</p>
 <ul>
 <li class=""><strong>Cálculo de IMC</strong> em tempo real.</li>
