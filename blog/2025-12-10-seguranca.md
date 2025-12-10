@@ -22,6 +22,8 @@ Exemplo de como **NÃO** se deve guardar um utilizador:
 const user = { username: 'andre', password: 'minhapasswordsecreta' };
 // Se alguém ler a base de dados, lê a password imediatamente.
 db.save(user);
+```
+:::
 
 ### A Solução: Salting & Hashing 🧂
 
