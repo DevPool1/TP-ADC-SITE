@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="rss.xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>NutriApp Blog</title>
+        <link>https://github.com/ADC_TP_NUTRICAO/blog</link>
+        <description>NutriApp Blog</description>
+        <lastBuildDate>Thu, 04 Dec 2025 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[🥗 Hello World: O Início da Nutri App]]></title>
+            <link>https://github.com/ADC_TP_NUTRICAO/blog/inicio-nutri-app</link>
+            <guid>https://github.com/ADC_TP_NUTRICAO/blog/inicio-nutri-app</guid>
+            <pubDate>Thu, 04 Dec 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Bem-vindos ao DevLog oficial da equipa Nutri App!]]></description>
+            <content:encoded><![CDATA[<p>Bem-vindos ao <strong>DevLog</strong> oficial da equipa Nutri App!
+A partir de hoje, vamos documentar a jornada de transformar código em saúde.</p>
+<p>O nosso lema é simples: <strong>Git Push Vegetais, Git Ignore Gorduras</strong>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-o-que-estamos-a-construir">🚀 O que estamos a construir?<a href="https://github.com/ADC_TP_NUTRICAO/blog/inicio-nutri-app#-o-que-estamos-a-construir" class="hash-link" aria-label="Direct link to 🚀 O que estamos a construir?" title="Direct link to 🚀 O que estamos a construir?" translate="no">​</a></h3>
+<p>Estamos a desenvolver uma solução completa para gestão nutricional que inclui:</p>
+<ul>
+<li class=""><strong>Cálculo de IMC</strong> em tempo real.</li>
+<li class=""><strong>Base de dados</strong> de alimentos (CRUD).</li>
+<li class=""><strong>Autenticação segura</strong> para múltiplos utilizadores.
+t</li>
+</ul>]]></content:encoded>
+            <category>devlog</category>
+            <category>roadmap</category>
+            <category>lançamento</category>
+        </item>
+    </channel>
+</rss>

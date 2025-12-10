@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunktp_adc_site=globalThis.webpackChunktp_adc_site||[]).push([[472],{5513:t=>{t.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"\ud83e\udd57 Hello World: O In\xedcio da Nutri App","permalink":"/ADC_TP_NUTRICAO/blog/inicio-nutri-app","unlisted":false,"date":"2025-12-04T00:00:00.000Z"}]}')}}]);
