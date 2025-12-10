@@ -154,6 +154,10 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      metadata: [
+        {name: 'keywords', content: 'nutrição, dieta, imc, saúde, app, gestão nutricional'},
+        {name: 'twitter:card', content: 'summary_large_image'},
+      ],
     }),
 };
 
