@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunktp_adc_site=globalThis.webpackChunktp_adc_site||[]).push([[335],{2524:t=>{t.exports=JSON.parse('{"metadata":{"permalink":"/ADC_TP_NUTRICAO/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
