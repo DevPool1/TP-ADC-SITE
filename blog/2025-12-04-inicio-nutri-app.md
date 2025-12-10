@@ -11,6 +11,8 @@ A partir de hoje, vamos documentar a jornada de transformar código em saúde.
 
 O nosso lema é simples: **Git Push Vegetais, Git Ignore Gorduras**.
 
+<!-- truncate -->
+
 ### 🚀 O que estamos a construir?
 
 Estamos a desenvolver uma solução completa para gestão nutricional que inclui:

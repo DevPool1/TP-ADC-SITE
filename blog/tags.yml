@@ -1,19 +1,14 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+devlog:
+  label: DevLog
+  permalink: /devlog
+  description: Diário de desenvolvimento do NutriApp
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+roadmap:
+  label: Roadmap
+  permalink: /roadmap
+  description: Planos futuros e funcionalidades planeadas
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
-
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+lançamento:
+  label: Lançamento
+  permalink: /lancamento
+  description: Notícias sobre lançamentos e versões
