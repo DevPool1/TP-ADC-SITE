@@ -49,4 +49,21 @@ O Índice de Massa Corporal (IMC) é calculado automaticamente com base no teu p
 ![Registo](../static/img/demo/demo-17.png)
 ---
 
+## 5. Insert e delte em de alimentos em lote (Admin)
+
+O plano Pro possibilita inserção e eleminação de alimentos em lote, o que providencia uma maior flexibilidade e rapidez de ação.
+
+![Registo](../static/img/demo/demo-22.png)
+
+![Registo](../static/img/demo/demo-23.png)
+---
+
+## 5. Criação de contas de administrador (Admin)
+
+O plano Pro possibilita a criação de contas de administrador ilimitadas funcionalidade focada para empresas e ginásios (gestão distribuida).
+
+![Registo](../static/img/demo/demo-24.png)
+
+---
+
 Precisa de ajuda técnica? [Contacte o suporte](mailto:suporte@nutriapp.com) ou abra um *issue* no GitHub.
