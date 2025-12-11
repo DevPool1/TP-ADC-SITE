@@ -58,7 +58,7 @@ O plano Pro possibilita inserção e eleminação de alimentos em lote, o que pr
 ![Registo](../static/img/demo/demo-23.png)
 ---
 
-## 5. Criação de contas de administrador (Admin)
+## 6. Criação de contas de administrador (Admin)
 
 O plano Pro possibilita a criação de contas de administrador ilimitadas funcionalidade focada para empresas e ginásios (gestão distribuida).
 
