@@ -22,9 +22,8 @@ Closes #
 <!-- Confirma que completaste os seguintes passos -->
 
 - [ ] O código segue as convenções do projeto
-- [ ] Testei localmente com `yarn start`
 - [ ] Atualizei a documentação (se aplicável)
-- [ ] Os commits seguem a convenção semântica (feat:, fix:, docs:, etc.)
+- [ ] Os commits seguem a convenção (feat:, fix:, docs:, etc.)
 - [ ] Referenciei a issue nos commits (`Refs #X` ou `Closes #X`)
 
 ## 📸 Screenshots (se aplicável)
