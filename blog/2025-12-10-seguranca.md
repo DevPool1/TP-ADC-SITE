@@ -1,6 +1,6 @@
 ---
 slug: seguranca-passwords-hash
-title: 🔐 Segurança: Fazemos Hash de Passwords, não de Batatas
+title: "🔐 Segurança: Fazemos Hash de Passwords, não de Batatas"
 authors: [andre]
 tags: [backend, segurança, criptografia]
 date: 2025-12-06
