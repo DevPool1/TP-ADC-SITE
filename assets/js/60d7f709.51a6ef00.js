@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunktp_adc_site=globalThis.webpackChunktp_adc_site||[]).push([[830],{8523:t=>{t.exports=JSON.parse('{"metadata":{"permalink":"/TP-ADC-SITE/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":3,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
