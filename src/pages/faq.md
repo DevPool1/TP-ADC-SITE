@@ -41,7 +41,7 @@ Sim. Para guardar o teu histórico alimentar e perfil de saúde, é necessário 
 - ✅ **HTTPS** em todas as comunicações
 - ✅ **Encriptação** de dados sensíveis na base de dados
 
-Lê mais no nosso [artigo sobre segurança](/blog/seguranca).
+Lê mais no nosso [artigo sobre segurança](/blog/seguranca-passwords-hash).
 
 ### Partilham os meus dados com terceiros?
 
