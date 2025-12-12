@@ -103,6 +103,7 @@ const config = {
           { to: '/about', label: 'Sobre a Equipa', position: 'left' },
           { to: '/blog', label: 'Blog', position: 'left' },
           { to: '/nutrition-table', label: 'Nutrição', position: 'left' },
+          { to: '/roadmap', label: 'Roadmap', position: 'left' },
           { to: '/pricing', label: 'Pricing', position: 'left' },
           { to: '/faq', label: 'FAQ', position: 'left' },
           {
