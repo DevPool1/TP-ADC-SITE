@@ -47,6 +47,10 @@ Lê mais no nosso [artigo sobre segurança](/blog/seguranca).
 
 **Não.** Os teus dados são exclusivamente teus. Nunca vendemos ou partilhamos informação pessoal.
 
+> **Compromisso de Privacidade:** 
+> No NutriApp, acreditamos que a tua saúde e privacidade andam de mãos dadas. 
+> Todos os dados são encriptados e armazenados de acordo com as melhores práticas GDPR.
+
 ---
 
 ## 💻 Técnico
