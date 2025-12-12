@@ -48,6 +48,7 @@ export default function Home() {
       <main>
         <HomepageFeatures />
         <StatsSection />
+        <BMICalculator />
         <TestimonialsSection />
       </main>
     </Layout>
