@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunktp_adc_site=globalThis.webpackChunktp_adc_site||[]).push([[1903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/TP-ADC-SITE/blog","blogTitle":"Blog","authorsListPath":"/TP-ADC-SITE/blog/authors"}')}}]);
