@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import ImageCarousel from '@site/src/components/ImageCarousel';
 
 const FeatureList = [
   {
@@ -67,20 +68,16 @@ export default function HomepageFeatures() {
           </div>
         </div>
       </section>
-      <section className={styles.features}>
+      
+      <section className={styles.features} style={{paddingTop: '2rem'}}>
         <div className="container">
-          <Heading as="h2" className="text--center margin-bottom--md">Galeria da Aplicação</Heading>
-          <div className="row">
-            {[1, 2, 3, 4].map((num) => (
-              <div key={num} className="col col--3 margin-bottom--md">
-                <img
-                  src={require(`@site/static/img/demo/demo-${num}.png`).default}
-                  alt={`Demo ${num}`}
-                  style={{ borderRadius: '8px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}
-                />
-              </div>
-            ))}
-          </div>
+          <Heading as="h2" className="text--center margin-bottom--md">
+            📸 Galeria da Aplicação
+          </Heading>
+          <p className="text--center margin-bottom--lg" style={{color: 'var(--ifm-color-emphasis-600)', maxWidth: '600px', margin: '0 auto 2rem'}}>
+            Explora as funcionalidades do NutriApp através de screenshots reais
+          </p>
+          <ImageCarousel />
         </div>
       </section>
     </>

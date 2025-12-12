@@ -12,3 +12,53 @@ lançamento:
   label: Lançamento
   permalink: /lancamento
   description: Notícias sobre lançamentos e versões
+
+arquitetura:
+  label: Arquitetura
+  permalink: /arquitetura
+  description: Decisões de arquitetura e design de sistema
+
+stack:
+  label: Stack Tecnológica
+  permalink: /stack
+  description: Tecnologias e ferramentas usadas
+
+devops:
+  label: DevOps
+  permalink: /devops
+  description: CI/CD, deployment e infraestrutura
+
+desenvolvimento:
+  label: Desenvolvimento
+  permalink: /desenvolvimento
+  description: Processo de desenvolvimento e boas práticas
+
+git:
+  label: Git
+  permalink: /git
+  description: Controlo de versões e Git Flow
+
+workflow:
+  label: Workflow
+  permalink: /workflow
+  description: Fluxo de trabalho e metodologias
+
+boas-práticas:
+  label: Boas Práticas
+  permalink: /boas-praticas
+  description: Padrões e boas práticas de código
+
+backend:
+  label: Backend
+  permalink: /backend
+  description: Desenvolvimento do lado do servidor
+
+segurança:
+  label: Segurança
+  permalink: /seguranca
+  description: Segurança da aplicação e dados
+
+criptografia:
+  label: Criptografia
+  permalink: /criptografia
+  description: Encriptação e proteção de dados
