@@ -3,13 +3,17 @@ title: Perguntas Frequentes (FAQ)
 description: Respostas às dúvidas mais comuns sobre o NutriApp
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # ❓ Perguntas Frequentes
 
 Encontra aqui as respostas às questões mais comuns sobre o **NutriApp**.
 
----
+<Tabs>
+  <TabItem value="geral" label="🥗 Geral" default>
 
-## 🥗 Sobre a Aplicação
+## Sobre a Aplicação
 
 ### O que é o NutriApp?
 
@@ -83,9 +87,11 @@ Sim! Se não encontrares um alimento na base de dados, podes criá-lo manualment
 
 Sim. Assim que defines o teu peso e altura no perfil, o **Índice de Massa Corporal** é calculado e atualizado automaticamente.
 
----
+  </TabItem>
 
-## 🚀 Suporte
+  <TabItem value="suporte" label="🚀 Suporte">
+
+## Suporte e Contacto
 
 ### Encontrei um bug. Como reporto?
 
@@ -96,9 +102,14 @@ Cria uma [Issue no GitHub](https://github.com/DevPool1/TP-ADC-SITE/issues) com:
 
 ### Como contacto a equipa?
 
-- 📧 Email: nutriapp@devpool.com
+- 📧 Email: a58379@ualg.pt
 - 💬 Discord: [Servidor da Comunidade](#)
 - 🐛 Bugs: [GitHub Issues](https://github.com/DevPool1/TP-ADC-SITE/issues)
+
+---
+
+  </TabItem>
+</Tabs>
 
 ---
 
