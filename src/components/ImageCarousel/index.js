@@ -2,10 +2,12 @@ import React from 'react';
 import styles from './styles.module.css';
 
 export default function ImageCarousel() {
-  // Carregar todas as 24 imagens
-  const images = Array.from({ length: 24 }, (_, i) => ({
-    src: require('@site/static/img/demo/demo-' + (i + 1) + '.png').default,
-    alt: `NutriApp Screenshot ${i + 1}`
+  // Selecionar apenas 8 screenshots representativos
+  const selectedImages = [1, 3, 5, 8, 12, 15, 18, 21];
+  
+  const images = selectedImages.map((num) => ({
+    src: require('@site/static/img/demo/demo-' + num + '.png').default,
+    alt: `NutriApp Screenshot ${num}`
   }));
 
   return (
