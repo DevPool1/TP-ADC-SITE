@@ -10,6 +10,10 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   title: 'NutriApp',
   tagline: 'git push nos vegetais, git ignore nas gorduras',
   favicon: 'img/favicon.ico',
@@ -97,7 +101,10 @@ const config = {
           },
           { to: '/about', label: 'Sobre a Equipa', position: 'left' },
           { to: '/blog', label: 'Blog', position: 'left' },
+          { to: '/nutrition-table', label: 'Nutrição', position: 'left' },
+          { to: '/roadmap', label: 'Roadmap', position: 'left' },
           { to: '/pricing', label: 'Pricing', position: 'left' },
+          { to: '/faq', label: 'FAQ', position: 'left' },
           {
             href: 'https://github.com/DevPool1/TP-ADC-SITE',
             label: 'GitHub',
