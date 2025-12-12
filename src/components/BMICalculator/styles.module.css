@@ -1,0 +1,244 @@
+.calculatorContainer {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.calculator {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4);
+  color: white;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.header p {
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+.inputsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.inputGroup {
+  position: relative;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input {
+  width: 100%;
+  padding: 1rem 3rem 1rem 1rem;
+  font-size: 1.5rem;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: white;
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.unit {
+  position: absolute;
+  right: 1rem;
+  bottom: 1.2rem;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+.resultContainer {
+  margin-top: 2rem;
+}
+
+.result {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  border: 4px solid;
+  animation: fadeInScale 0.5s ease-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.bmiValue {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.bmiCategory {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.bmiScale {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.scaleBar {
+  position: relative;
+  height: 12px;
+  background: linear-gradient(to right, #3b82f6, #10b981, #f59e0b, #ef4444);
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.scaleIndicator {
+  position: absolute;
+  top: -8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 3px solid white;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.1);
+  }
+}
+
+.scaleLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.scaleLabel {
+  text-align: center;
+  opacity: 0.9;
+}
+
+.resetButton {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resetButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+.placeholder {
+  text-align: center;
+  padding: 3rem 2rem;
+  opacity: 0.7;
+}
+
+.placeholderIcon {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.infoBox {
+  background: rgba(0, 0, 0, 0.2);
+  border-left: 4px solid rgba(255, 255, 255, 0.8);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.infoBox strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.infoBox code {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+@media screen and (max-width: 768px) {
+  .calculator {
+    padding: 2rem 1.5rem;
+  }
+  
+  .inputsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .bmiValue {
+    font-size: 3rem;
+  }
+  
+  .bmiCategory {
+    font-size: 1.2rem;
+  }
+  
+  .header h2 {
+    font-size: 1.5rem;
+  }
+}
