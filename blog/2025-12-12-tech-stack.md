@@ -347,61 +347,73 @@ Usamos `getpass.getpass()` para **não mostrar a password no terminal** durante 
 
 ---
 
-## 🐳 DevOps: Docker + GitHub Actions + Azure
+## � Sistema de Logging com Módulo Nativo
 
-### Containerização com Docker
+### Por Que Logging?
 
-```dockerfile
-# Multi-stage build = imagem 60% menor!
-FROM node:18-alpine AS builder
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci --only=production
+Numa aplicação console **não temos DevTools do browser**. O logging é crucial para:
+- Auditoria de ações de utilizadores
+- Debugging de erros em produção
+- Conformidade com requisitos de segurança
 
-FROM node:18-alpine
-COPY --from=builder /app/node_modules ./node_modules
-COPY . .
-EXPOSE 3000
-CMD ["node", "server.js"]
-```
+### Configuração Centralizada
 
-### CI/CD Pipeline
+```python
+# logging_config.py
+import logging
+import datetime
+import os
 
-```mermaid
-graph LR
-    A[git push] --> B[GitHub Actions]
-    B --> C{Tests Pass?}
-    C -->|Yes| D[Build Docker]
-    C -->|No| E[❌ Fail]
-    D --> F[Push to Registry]
-    F --> G[Deploy Azure]
-    G --> H[✅ Live]
+def setup_logging():
+    """Configura logging com rotação diária."""
+    log_dir = "logs"
+    os.makedirs(log_dir, exist_ok=True)
     
-    style C fill:#ffd700
-    style E fill:#ff6b6b
-    style H fill:#51cf66
+    log_file = f"{log_dir}/nutriapp_{datetime.date.today()}.log"
+    
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.FileHandler(log_file),
+        ]
+    )
+
+def get_logger(name):
+    """Retorna logger configurado."""
+    return logging.getLogger(name)
 ```
 
-**Workflow YAML:**
+### Uso no Código
 
-```yaml
-name: Deploy
-on:
-  push:
-    branches: [main]
+```python
+# main.py
+import logging_config
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Build
-        run: npm run build
-      - name: Test
-        run: npm test
-      - name: Deploy
-        run: az webapp deploy ...
+def main():
+    logging_config.setup_logging()
+    logger = logging_config.get_logger(__name__)
+    
+    logger.info("Sistema iniciado")
+    
+    # ... código ...
+    
+    if user_logado:
+        logger.info(f"Login sucesso. UserID: {user_id}, Username: {username}")
+    else:
+        logger.warning(f"Login falhado para username: {username}")
 ```
+
+**Output em `logs/nutriapp_2025-12-13.log`:**
+```
+2025-12-13 10:23:45 - __main__ - INFO - Sistema iniciado
+2025-12-13 10:24:12 - __main__ - INFO - Login sucesso. UserID: 5, Username: andre
+2025-12-13 10:25:03 - __main__ - INFO - Menu User. UserID: 5. Detalhes: Registou refeição: Almoço
+```
+
+:::info Boa Prática
+Logs **nunca** armazenam passwords! Apenas eventos e identificadores.
+:::
 
 ---
 
