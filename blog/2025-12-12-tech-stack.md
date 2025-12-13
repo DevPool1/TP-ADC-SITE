@@ -610,19 +610,56 @@ Docstrings bem escritas pouparam-nos **horas** a explicar o código à equipa!
 
 ---
 
-## 🤝 Conclusão
+## 📈 Estatísticas do Projeto
 
-A stack do NutriApp não é a mais "hype" nem a mais complexa. É **pragmática**, **testada** e **adequada ao problema**.
-
-> **"Choose boring technology."** — Dan McKinley
-
-Tecnologias maduras = menos surpresas em produção = mais tempo para features!
-
-Tens dúvidas sobre alguma escolha técnica? **Comenta abaixo ou abre uma [Discussion](https://github.com/DevPool1/TP-ADC-SITE/discussions)!**
+| Métrica | Valor |
+|---------|-------|
+| **Linhas de Código** | ~650 (main.py) + 500 (módulos) |
+| **Ficheiros Python** | 10 módulos + 8 RST docs |
+| **Commits Git** | 137+ (múltiplos branches) |
+| **Tabelas BD** | 3 (users, alimentos, registos) |
+| **Funcionalidades** | 15+ (CRUD completo) |
+| **Tempo de Desenvolvimento** | 3 semanas (4 developers) |
 
 ---
 
-![](https://img.shields.io/badge/Stack-React%20%2B%20Node.js-blue?style=for-the-badge)
-![](https://img.shields.io/badge/Database-PostgreSQL-336791?style=for-the-badge&logo=postgresql)
-![](https://img.shields.io/badge/Deploy-Azure-0078D4?style=for-the-badge&logo=microsoft-azure)
-![](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions)
+## 🤝 Conclusão
+
+O NutriApp demonstra que **simplicidade técnica** não significa **funcionalidade limitada**. Com Python, SQLite e padrões de arquitetura sólidos, criámos uma aplicação:
+
+✅ **Robusta:** Transações ACID, hashing de passwords, logging completo  
+✅ **Escalável:** Arquitetura MVC facilita migração para web  
+✅ **Manutenível:** Código documentado com Sphinx, separação clara de responsabilidades  
+✅ **Educacional:** Perfeita para aprender fundamentos de engenharia de software  
+
+### Principais Takeaways
+
+1. **Python 3.10+ `match/case`** torna controllers muito mais legíveis
+2. **SQLite** é surpreendentemente poderoso para apps pequenas/médias
+3. **Arquitetura MVC** funciona perfeitamente em aplicações console
+4. **Logging** é essencial quando não há UI visual
+5. **Docstrings** são investimento que se paga rapidamente
+
+### Repositório do Código
+
+🔗 **GitHub:** [DevPool1/ADC_TP_NUTRICAO](https://github.com/DevPool1/ADC_TP_NUTRICAO)
+
+```bash
+# Clone e executa
+git clone https://github.com/DevPool1/ADC_TP_NUTRICAO
+cd ADC_TP_NUTRICAO
+python src/main.py
+
+# Credenciais padrão
+# Username: admin1
+# Password: 123
+```
+
+Tens dúvidas sobre alguma escolha técnica? **Abre uma [Issue](https://github.com/DevPool1/ADC_TP_NUTRICAO/issues) ou [Discussion](https://github.com/DevPool1/TP-ADC-SITE/discussions)!**
+
+---
+
+![](https://img.shields.io/badge/Python-3.10+-3776ab?style=for-the-badge&logo=python)
+![](https://img.shields.io/badge/Database-SQLite-003b57?style=for-the-badge&logo=sqlite)
+![](https://img.shields.io/badge/Architecture-MVC-ffd343?style=for-the-badge)
+![](https://img.shields.io/badge/Docs-Sphinx-000000?style=for-the-badge&logo=sphinx)
