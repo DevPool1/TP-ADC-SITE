@@ -56,47 +56,55 @@ graph TB
 
 ---
 
-## 💻 Frontend: React + TypeScript
+## � Por Que Python 3.10+?
 
-### Por Que React?
+### Python vs Outras Linguagens
 
-| Critério | React | Alternativas | Decisão |
-|----------|-------|--------------|---------|
-| **Ecossistema** | ⭐⭐⭐⭐⭐ | Vue (⭐⭐⭐⭐), Angular (⭐⭐⭐) | **React** pela maturidade |
-| **Performance** | ⭐⭐⭐⭐⭐ | Vue (⭐⭐⭐⭐⭐), Angular (⭐⭐⭐⭐) | Empate técnico |
-| **Comunidade** | ⭐⭐⭐⭐⭐ | Vue (⭐⭐⭐⭐), Angular (⭐⭐⭐) | **React** domina |
-| **Curva Aprendizagem** | ⭐⭐⭐⭐ | Vue (⭐⭐⭐⭐⭐), Angular (⭐⭐) | Vue mais fácil |
+**Veredito:** Python é perfeito para aplicações onde produtividade > performance bruta.
 
-**Veredito:** React oferece o melhor equilíbrio entre poder e flexibilidade.
+### Match/Case: A Funcionalidade Killer do Python 3.10
 
-### TypeScript: Type Safety é Essencial
+```python
+# ❌ Python 3.9: if/elif cascata
+choice = input("Escolha: ")
+if choice == '1':
+    registar_refeicao()
+elif choice == '2':
+    ver_diario()
+elif choice == '3':
+    editar_registo()
+# ... 10 opções depois ...
 
-```typescript
-// ❌ JavaScript: Erros só em runtime
-const calculateBMI = (weight, height) => {
-  return weight / (height * height);
-};
-calculateBMI("80", "1.75"); // 💥 NaN sem avisos!
-
-// ✅ TypeScript: Erros em compile-time
-const calculateBMI = (weight: number, height: number): number => {
-  return weight / (height * height);
-};
-calculateBMI("80", "1.75"); // ❌ Erro: Argument of type 'string'...
+# ✅ Python 3.10+: match/case limpo
+match choice:
+    case '1': registar_refeicao()
+    case '2': ver_diario()
+    case '3': editar_registo()
+    case '0': logout()
+    case _: print("Opção inválida")
 ```
 
 :::tip Benefício Real
-TypeScript reduziu os nossos bugs de produção em **60%** comparado com o protótipo inicial em JavaScript puro.
+O `match/case` tornou o [main.py](https://github.com/DevPool1/ADC_TP_NUTRICAO/blob/main/src/main.py) **40% mais legível** comparado com if/elif!
 :::
 
-### State Management: Redux Toolkit
+### SQLite Nativo: Zero Dependências
 
-Inicialmente usámos **Context API**, mas à medida que a app cresceu, migrá para **Redux Toolkit**:
+```python
+import sqlite3  # Nativo! Sem pip install
 
-- ✅ Time-travel debugging
-- ✅ Middleware para logging
-- ✅ Integração com DevTools
-- ✅ Padrões estabelecidos
+# Context manager automático
+with get_db_connection() as conn:
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM users WHERE username = ?", (username,))
+    return cursor.fetchone()
+```
+
+**Por que SQLite vs PostgreSQL/MySQL?**
+- ✅ Zero configuração (ficheiro `data/nutricao.db`)
+- ✅ Transações ACID completas
+- ✅ Perfeito para ~100k registos
+- ✅ Cross-platform (funciona em Windows/Linux/Mac)
 
 ---
 
