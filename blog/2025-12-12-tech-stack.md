@@ -602,11 +602,11 @@ Docstrings bem escritas pouparam-nos **horas** a explicar o código à equipa!
 
 | Tecnologia | Recurso Recomendado | Nível |
 |------------|---------------------|-------|
-| React | [docs.react.dev](https://react.dev) | Todos |
-| TypeScript | [TypeScript Handbook](https://www.typescriptlang.org/docs/) | Intermédio |
-| PostgreSQL | [PostgreSQL Tutorial](https://www.postgresqltutorial.com/) | Todos |
-| Docker | [Docker Docs](https://docs.docker.com/) | Todos |
-| Node.js | [Node.js Best Practices](https://github.com/goldbergyoni/nodebestpractices) | Avançado |
+| Python 3.10+ | [docs.python.org](https://docs.python.org/3/) | Todos |
+| SQLite | [SQLite Tutorial](https://www.sqlitetutorial.net/) | Todos |
+| Arquitetura MVC | [Real Python - MVC](https://realpython.com/the-model-view-controller-mvc-paradigm-summarized-with-legos/) | Intermédio |
+| Sphinx Docs | [Sphinx Documentation](https://www.sphinx-doc.org/) | Intermédio |
+| Git Flow | [Atlassian Git Flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) | Todos |
 
 ---
 
