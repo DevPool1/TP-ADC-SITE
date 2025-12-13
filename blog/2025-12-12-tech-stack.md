@@ -514,18 +514,65 @@ def categoria_imc(self):
 
 ## 💡 Lições Aprendidas
 
-### 1. Começar Simples
-Inicialmente queríamos **Kubernetes**, **Microservices**, **GraphQL**... YAGNI! (You Aren't Gonna Need It)
+### 1. Match/Case é Game Changer
+Inicialmente usámos `if/elif` cascatas. Refactorizar para `match/case` melhorou a legibilidade drasticamente.
 
-:::warning Over-engineering
-Passámos 2 semanas a configurar Kubernetes para uma app que ainda não tinha 10 utilizadores. **Desperdício total.**
+```python
+# ❌ Antes: 100 linhas de if/elif
+if choice == '1':
+    # 20 linhas
+elif choice == '2':
+    # 15 linhas
+# ... ad nauseam
+
+# ✅ Depois: Estrutura clara
+match choice:
+    case '1': registar_refeicao()
+    case '2': ver_diario()
+    # Cada função < 50 linhas
+```
+
+### 2. Context Managers Previnem Leaks
+
+```python
+# ❌ Má prática: Esquecer de fechar
+conn = sqlite3.connect(DB_PATH)
+cursor = conn.cursor()
+cursor.execute(sql)
+# Oops! Esqueci conn.close()
+
+# ✅ Boa prática: Automático
+with get_db_connection() as conn:
+    cursor = conn.cursor()
+    cursor.execute(sql)
+    # conn.close() chamado automaticamente!
+```
+
+### 3. Docstrings São Documentação Viva
+
+Usámos **Sphinx** para gerar documentação HTML automática:
+
+```python
+def create_user(username, password_plain, peso_kg=None, altura_cm=None):
+    """
+    Cria novo utilizador na base de dados.
+
+    :param username: Nome do utilizador
+    :type username: str
+    :param password_plain: Password em texto simples (será hasheada)
+    :type password_plain: str
+    :param peso_kg: Peso em quilogramas
+    :type peso_kg: float
+    :return: ID do utilizador criado ou None se já existir
+    :rtype: int or None
+    """
+```
+
+**Resultado:** Documentação completa em `docs/_build/html/index.html`
+
+:::tip Produtividade
+Docstrings bem escritas pouparam-nos **horas** a explicar o código à equipa!
 :::
-
-### 2. TypeScript Desde o Início
-Adicionar TypeScript a meio do projeto foi doloroso. **Lição:** Type safety desde o commit 1.
-
-### 3. Testes Automatizados Poupam Tempo
-Sim, escrever testes demora. Mas debugar em produção demora **10x mais**.
 
 ---
 
