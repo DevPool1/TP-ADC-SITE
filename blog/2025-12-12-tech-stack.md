@@ -195,39 +195,71 @@ class Admin(User):
 
 ---
 
-## 🗄️ Base de Dados: PostgreSQL
+## 🗄️ Esquema da Base de Dados SQLite
 
-### Por Que Relacional?
+### Modelo Relacional
 
-Os dados nutricionais têm **relações naturais**:
-
-- Utilizadores → Diários → Refeições → Alimentos
-- Alimentos → Categorias → Macronutrientes
-
-```sql
--- Relação Many-to-Many com Tabela Pivot
-SELECT 
-    u.username,
-    SUM(f.calories * mf.quantity) as total_calories
-FROM users u
-JOIN meal_entries me ON u.id = me.user_id
-JOIN meal_foods mf ON me.id = mf.meal_id
-JOIN foods f ON mf.food_id = f.id
-WHERE me.date = CURRENT_DATE
-GROUP BY u.username;
+```mermaid
+erDiagram
+    USERS ||--o{ REGISTOS_DIARIOS : cria
+    ALIMENTOS ||--o{ REGISTOS_DIARIOS : contem
+    
+    USERS {
+        int user_id PK
+        string username UK
+        string password_hash
+        float peso_kg
+        int altura_cm
+        int objetivo_calorias
+        string role
+    }
+    
+    ALIMENTOS {
+        int alimento_id PK
+        string nome UK
+        int calorias
+        float proteinas
+        float hidratos
+        float gorduras
+    }
+    
+    REGISTOS_DIARIOS {
+        int registo_id PK
+        int user_id FK
+        int alimento_id FK
+        string data_registo
+        float quantidade_gramas
+        string tipo_refeicao
+    }
 ```
 
-### PostgreSQL vs MySQL vs MongoDB
+### Query Complexa: Calorias Totais por Refeição
 
-| Feature | PostgreSQL | MySQL | MongoDB |
-|---------|-----------|-------|---------|
-| **ACID** | ✅ Full | ⚠️ Parcial | ❌ Eventual |
-| **JSON Support** | ✅ JSONB | ⚠️ JSON | ✅ Nativo |
-| **Escalabilidade Vertical** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
-| **Escalabilidade Horizontal** | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| **Queries Complexas** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐ |
+```python
+# crud_registos.py
+def get_registos_by_user(user_id, data_str=None):
+    """Obtém registos com JOIN para calcular calorias."""
+    sql = """
+    SELECT 
+        r.registo_id,
+        r.data_registo,
+        r.tipo_refeicao,
+        r.quantidade_gramas,
+        a.nome as alimento_nome,
+        a.calorias,
+        a.proteinas,
+        (a.calorias * r.quantidade_gramas / 100.0) as calorias_total,
+        (a.proteinas * r.quantidade_gramas / 100.0) as proteinas_total
+    FROM registos_diarios r
+    JOIN alimentos a ON r.alimento_id = a.alimento_id
+    WHERE r.user_id = ?
+    ORDER BY r.data_registo DESC
+    """
+```
 
-**Veredito:** PostgreSQL para garantir integridade dos dados nutricionais.
+:::tip Performance
+O SQLite usa **row_factory = sqlite3.Row** para retornar dicionários em vez de tuplas!
+:::
 
 ---
 
