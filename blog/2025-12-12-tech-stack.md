@@ -263,51 +263,86 @@ O SQLite usa **row_factory = sqlite3.Row** para retornar dicionários em vez de 
 
 ---
 
-## 🔐 Autenticação: JWT + bcrypt
+## 🔐 Autenticação Segura com hashlib
 
-### Fluxo de Autenticação
+### Fluxo de Login
 
 ```mermaid
 sequenceDiagram
     autonumber
     participant U as User
-    participant F as Frontend
-    participant B as Backend
-    participant DB as PostgreSQL
+    participant M as main.py
+    participant C as crud_login.py
+    participant DB as SQLite
+    participant H as utils.py
     
-    U->>F: Login (email, password)
-    F->>B: POST /api/auth/login
-    B->>DB: SELECT * FROM users WHERE email = ?
-    DB-->>B: {id, email, hashed_password}
-    B->>B: bcrypt.compare(password, hashed)
+    U->>M: Input username + password
+    M->>C: login(username, password)
+    C->>DB: SELECT * WHERE username = ?
+    DB-->>C: {user_id, username, password_hash}
+    C->>H: check_password(hash, password)
+    H->>H: hashlib.sha256(password)
     
     alt Password Válida
-        B->>B: jwt.sign({id, email}, SECRET)
-        B-->>F: {token, user}
-        F->>F: localStorage.setItem('token')
-        F-->>U: Redirect /dashboard
-    else Password Inválida
-        B-->>F: 401 Unauthorized
-        F-->>U: "Credenciais inválidas"
+        H-->>C: True
+        C-->>M: user_record
+        M->>M: user_logado = user_record
+        M-->>U: Redireciona para menu_logado()
+    else Password Inválida (3 tentativas)
+        H-->>C: False
+        C-->>M: None
+        M-->>U: "Login falhou"
     end
 ```
 
-### Por Que JWT e Não Sessions?
+### Hashing de Passwords
 
-```javascript
-// ✅ JWT: Stateless, escalável
-const token = jwt.sign(
-  { userId: user.id, email: user.email },
-  process.env.JWT_SECRET,
-  { expiresIn: '7d' }
-);
+```python
+# utils.py
+import hashlib
 
-// ❌ Sessions: Requer Redis/DB para estado
-req.session.userId = user.id; // Não funciona em multi-server
+def hash_password(password_plain: str) -> str:
+    """Gera hash SHA-256 da password."""
+    return hashlib.sha256(password_plain.encode('utf-8')).hexdigest()
+
+def check_password(stored_hash: str, password_plain: str) -> bool:
+    """Verifica se a password corresponde ao hash."""
+    return stored_hash == hash_password(password_plain)
 ```
 
-:::info Segurança
-Nunca guardamos passwords em texto simples! **bcrypt** com custo 12 garante ~300ms para hash (dificulta brute-force).
+```python
+# crud_login.py
+def login(username, password_plain):
+    """Login com 3 tentativas para a password."""
+    sql = "SELECT * FROM users WHERE username = ?"
+    
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute(sql, (username,))
+        user_record = cursor.fetchone()
+        
+        if not user_record:
+            print("Utilizador não encontrado")
+            return None
+        
+        # Sistema de 3 tentativas
+        tentativas = 0
+        while tentativas < 3:
+            if check_password(user_record['password_hash'], password_plain):
+                print("Login bem sucedido")
+                return user_record
+            else:
+                tentativas += 1
+                if tentativas < 3:
+                    print("Password errada... Tente Novamente")
+                    password_plain = getpass.getpass("Password: ")
+        
+        print("Número máximo de tentativas excedido.")
+        return None
+```
+
+:::warning Segurança
+Usamos `getpass.getpass()` para **não mostrar a password no terminal** durante o input!
 :::
 
 ---
