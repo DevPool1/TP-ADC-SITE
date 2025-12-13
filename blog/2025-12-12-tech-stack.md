@@ -108,51 +108,90 @@ with get_db_connection() as conn:
 
 ---
 
-## ⚙️ Backend: Node.js + Express
+## 🗂️ Módulos CRUD: Separação de Responsabilidades
 
-### A Escolha do Node.js
+### Organização do Código
 
-```mermaid
-sequenceDiagram
-    participant C as Client
-    participant N as Node.js
-    participant D as Database
-    
-    C->>N: POST /api/auth/login
-    Note over N: Single-threaded<br/>Event Loop
-    N->>D: Query user
-    D-->>N: User data
-    N->>N: bcrypt.compare() (async)
-    N-->>C: JWT Token
-    
-    Note over C,D: Não-bloqueante = Rápido!
+```
+src/
+├── main.py              # Controller: Orquestra tudo
+├── menus.py             # View: UI em terminal
+├── user.py / admin.py   # Model: Classes de domínio
+├── crud_login.py        # CRUD: Gestão de utilizadores
+├── crud_alimentos.py    # CRUD: Gestão de alimentos
+├── crud_registos.py     # CRUD: Diário de refeições
+├── database.py          # Conexão SQLite
+├── logging_config.py    # Sistema de logging
+└── utils.py             # Funções auxiliares
 ```
 
-**Porquê Node.js vs Python/Java?**
+### Exemplo: CRUD de Alimentos
 
-| Aspeto | Node.js | Python | Java |
-|--------|---------|--------|------|
-| **I/O Assíncrono** | Nativo | Asyncio (complexo) | Threads (overhead) |
-| **JSON** | Nativo | Bibliotecas | Verbose |
-| **Velocidade** | ⚡⚡⚡⚡ | ⚡⚡⚡ | ⚡⚡⚡⚡⚡ |
-| **Ecosystem** | npm (2M+) | PyPI (400k) | Maven |
-
-**Decisão:** Node.js pela consistência (JavaScript front-to-back) e performance em I/O.
-
-### Express: Minimalista mas Poderoso
-
-```javascript
-// Middleware stack elegante
-app.use(helmet()); // Segurança
-app.use(cors());   // CORS
-app.use(express.json()); // Body parsing
-app.use('/api/auth', authRoutes); // Rotas modulares
-app.use(errorHandler); // Error handling centralizado
+```python
+# crud_alimentos.py
+def create_alimento(nome, calorias, proteinas, hidratos, gorduras):
+    """Cria um novo alimento na base de dados."""
+    sql = """INSERT INTO alimentos(nome, calorias, proteinas, hidratos, gorduras) 
+             VALUES (?, ?, ?, ?, ?)"""
+    try:
+        with get_db_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute(sql, (nome, calorias, proteinas, hidratos, gorduras))
+            conn.commit()
+            return cursor.lastrowid
+    except sqlite3.IntegrityError:
+        print(f"Erro: Alimento '{nome}' já existe.")
+        return None
 ```
 
-:::caution Lição Aprendida
-Não usar `app.use(express.json())` causou-nos 3 horas de debugging. **Ordem dos middlewares importa!**
+:::info Boa Prática
+Cada módulo `crud_*.py` contém **apenas operações de base de dados**. Zero lógica de UI!
 :::
+
+### Classes OOP: User e Admin
+
+```python
+# user.py
+class User:
+    def __init__(self, username, peso_kg, altura_cm, objetivo_calorias):
+        self.username = username
+        self.peso_kg = peso_kg
+        self.altura_cm = altura_cm
+        self.objetivo_calorias = objetivo_calorias
+    
+    @property
+    def imc(self):
+        """Calcula IMC automaticamente."""
+        if self.peso_kg and self.altura_cm:
+            altura_m = self.altura_cm / 100
+            return round(self.peso_kg / (altura_m ** 2), 1)
+        return None
+    
+    def categoria_imc(self):
+        """Retorna categoria do IMC."""
+        if not self.imc:
+            return "Dados insuficientes"
+        if self.imc < 18.5:
+            return "Abaixo do Peso"
+        elif self.imc < 25:
+            return "Peso Normal"
+        # ... mais categorias
+```
+
+```python
+# admin.py
+class Admin(User):
+    """Herança! Admin é um User com superpoderes."""
+    
+    @staticmethod
+    def listar_utilizadores():
+        """Método exclusivo de admin."""
+        sql = "SELECT username, role FROM users ORDER BY username"
+        with get_db_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute(sql)
+            return cursor.fetchall()
+```
 
 ---
 
