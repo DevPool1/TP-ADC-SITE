@@ -576,13 +576,25 @@ Docstrings bem escritas pouparam-nos **horas** a explicar o código à equipa!
 
 ---
 
-## 🔮 Futuro: Roadmap Técnico
+## 🔮 Roadmap: De Console para Web
 
-- [ ] **GraphQL** para queries mais eficientes
-- [ ] **WebSockets** para notificações em tempo real
-- [ ] **Redis** para caching de alimentos frequentes
-- [ ] **Elasticsearch** para busca avançada
-- [ ] **React Native** para apps mobile
+### Fase 1: API REST (Em Progresso)
+- [ ] FastAPI backend preservando lógica CRUD
+- [ ] Endpoints: `/api/auth`, `/api/foods`, `/api/meals`
+- [ ] Migração SQLite → PostgreSQL
+- [ ] Autenticação com JWT
+
+### Fase 2: Frontend React
+- [ ] Interface web responsiva
+- [ ] Dashboard com gráficos de calorias
+- [ ] Busca de alimentos em tempo real
+- [ ] PWA para uso offline
+
+### Fase 3: Features Avançadas
+- [ ] Análise nutricional com machine learning
+- [ ] Integração com APIs de alimentos (USDA, Open Food Facts)
+- [ ] Exportação de dados em PDF
+- [ ] App mobile com React Native
 
 ---
 
