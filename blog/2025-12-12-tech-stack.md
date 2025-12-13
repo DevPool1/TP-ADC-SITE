@@ -417,16 +417,98 @@ Logs **nunca** armazenam passwords! Apenas eventos e identificadores.
 
 ---
 
-## 📊 Monitorização & Performance
+## � Funcionalidades Avançadas
 
-### Métricas-Chave
+### 1. Operações em Lote (Admin)
 
-| Métrica | Target | Atual | Status |
-|---------|--------|-------|--------|
-| **Response Time** | < 200ms | 150ms | ![](https://img.shields.io/badge/-OK-brightgreen) |
-| **Uptime** | > 99% | 99.9% | ![](https://img.shields.io/badge/-Excellent-brightgreen) |
-| **Error Rate** | < 1% | 0.3% | ![](https://img.shields.io/badge/-Excellent-brightgreen) |
-| **Build Time** | < 5min | 3min | ![](https://img.shields.io/badge/-OK-brightgreen) |
+```python
+# admin.py
+@staticmethod
+def inserir_em_lote():
+    """Insere múltiplos alimentos de uma vez."""
+    print("Formato: nome,calorias,proteinas,hidratos,gorduras,nome,...")
+    lote = input("Dados>>> ")
+    dados = [x.strip() for x in lote.split(",")]
+    
+    if len(dados) % 5 != 0:
+        print("Erro: formato inválido")
+        return
+    
+    lote_dados = []
+    for i in range(0, len(dados), 5):
+        nome = dados[i]
+        calorias = int(dados[i+1])
+        proteinas = float(dados[i+2])
+        hidratos = float(dados[i+3])
+        gorduras = float(dados[i+4])
+        lote_dados.append((nome, calorias, proteinas, hidratos, gorduras))
+    
+    sql = """INSERT OR IGNORE INTO alimentos 
+             (nome, calorias, proteinas, hidratos, gorduras)
+             VALUES (?, ?, ?, ?, ?)"""
+    
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.executemany(sql, lote_dados)  # Batch insert!
+        conn.commit()
+```
+
+:::tip Performance
+`executemany()` é **10x mais rápido** que múltiplos `execute()` individuais!
+:::
+
+### 2. Agrupamento de Refeições por Data
+
+```python
+# main.py - Lógica de agrupamento no controller
+registos = crud_registos.get_registos_by_user(user_id_logado)
+
+refeicoes_agrupadas = {}
+for reg in registos:
+    data_limpa = reg['data_registo'].split('T')[0]  # 2025-12-13
+    chave = f"{data_limpa} | {reg['tipo_refeicao']}"  # "2025-12-13 | Almoço"
+    
+    if chave not in refeicoes_agrupadas:
+        refeicoes_agrupadas[chave] = []
+    refeicoes_agrupadas[chave].append(reg)
+
+# Output organizado por refeição
+for refeicao_titulo, lista_items in refeicoes_agrupadas.items():
+    print(f"\nREFEIÇÃO: {refeicao_titulo}")
+    subtotal_cal = 0
+    
+    for reg in lista_items:
+        print(f"- {reg['alimento_nome']} ({reg['quantidade_gramas']}g) -> {reg['calorias_total']:.1f} kcal")
+        subtotal_cal += reg['calorias_total']
+    
+    print(f"Subtotal: {subtotal_cal:.1f} kcal")
+```
+
+### 3. Cálculo Automático de IMC
+
+```python
+# user.py
+@property
+def imc(self):
+    """Property dinâmica - calcula sempre que acedida."""
+    if self.peso_kg and self.altura_cm:
+        altura_m = self.altura_cm / 100
+        return round(self.peso_kg / (altura_m ** 2), 1)
+    return None
+
+def categoria_imc(self):
+    """Retorna categoria baseada em guidelines WHO."""
+    if not self.imc:
+        return "Dados insuficientes"
+    if self.imc < 18.5:
+        return "Abaixo do Peso"
+    elif self.imc < 25:
+        return "Peso Normal"
+    elif self.imc < 30:
+        return "Sobrepeso"
+    else:
+        return "Obesidade"
+```
 
 ---
 
