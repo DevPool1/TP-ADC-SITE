@@ -1,12 +1,12 @@
 ---
 slug: tech-stack-nutriapp
-title: "🚀 Da Ideia ao Deploy: A Stack Tecnológica do NutriApp"
+title: "🥑 Arquitetura do NutriApp: Python Console com SQLite"
 authors: [alexandru]
-tags: [arquitetura, stack, devops, desenvolvimento]
+tags: [python, sqlite, arquitetura, desenvolvimento]
 date: 2025-12-12
 ---
 
-Da necessidade de um sistema de gestão nutricional nasceu o **NutriApp**. Mas transformar uma ideia em realidade exige escolhas técnicas sólidas. Hoje partilhamos a nossa stack tecnológica e o raciocínio por trás de cada decisão.
+Como construímos uma aplicação console robusta para gestão nutricional usando Python 3.10+, SQLite3 e padrões de arquitetura limpa. Este post detalha as decisões técnicas por trás do **NutriApp**.
 
 <!-- truncate -->
 
