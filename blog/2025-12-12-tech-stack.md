@@ -10,42 +10,49 @@ Como construímos uma aplicação console robusta para gestão nutricional usand
 
 <!-- truncate -->
 
-## 🎯 Visão Geral da Arquitetura
+## �️ Arquitetura MVC em Python
 
-O NutriApp é construído sobre uma arquitetura moderna de **três camadas**, separando responsabilidades e garantindo escalabilidade.
+O NutriApp segue o padrão **Model-View-Controller**, separando lógica de negócio, apresentação e controlo numa aplicação console.
 
 ```mermaid
 graph TB
-    subgraph Frontend
-        A[React SPA] --> B[TypeScript]
-        B --> C[Redux Toolkit]
+    subgraph View
+        A[menus.py] --> B[Terminal UI]
     end
     
-    subgraph Backend
-        D[Node.js] --> E[Express API]
-        E --> F[JWT Auth]
+    subgraph Controller
+        C[main.py] --> D[Flow Control]
+        D --> E[Match/Case Python 3.10+]
     end
     
-    subgraph Database
-        G[PostgreSQL] --> H[Sequelize ORM]
+    subgraph Model
+        F[user.py / admin.py] --> G[Business Logic]
+        H[crud_*.py] --> I[Database Operations]
+        J[database.py] --> K[SQLite Connection]
     end
     
-    subgraph DevOps
-        I[Docker] --> J[GitHub Actions]
-        J --> K[Azure App Service]
+    subgraph Infrastructure
+        L[logging_config.py] --> M[File Logging]
+        N[utils.py] --> O[Helper Functions]
     end
     
-    A --> E
-    E --> H
-    I --> D
-    I --> G
-    J --> K
+    B --> D
+    D --> G
+    D --> I
+    I --> K
+    M --> D
+    O --> D
     
-    style A fill:#61dafb
-    style D fill:#68a063
-    style G fill:#336791
-    style I fill:#2496ed
+    style A fill:#3776ab
+    style C fill:#ffd343
+    style F fill:#68a063
+    style J fill:#003b57
 ```
+
+**Separação de Responsabilidades:**
+- **View** (menus.py): Apenas imprime e pede input
+- **Controller** (main.py): Orquestra a aplicação com `match/case`
+- **Model** (classes + CRUD): Lógica de negócio e acesso a dados
 
 ---
 
