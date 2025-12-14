@@ -12,19 +12,24 @@
 }
 
 .imageContainer {
+  height: 450px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   flex: 1;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  background: #f8f9fa;
+  background: auto; 
 }
 
 .carouselImage {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain; 
+  border-radius: 12px;
   display: block;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .counter {
