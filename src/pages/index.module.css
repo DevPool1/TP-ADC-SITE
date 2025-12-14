@@ -133,3 +133,12 @@ td:first-child {
     #77ffd2 /* Roxo */
   );
 }
+
+tr:hover td {
+  background-color:  #0c356b; /* Azul-esverdeado */
+}
+
+tr:hover td:first-child {
+  background-color: #0c356b;
+  color: #1f46af;
+}
