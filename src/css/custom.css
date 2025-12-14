@@ -39,11 +39,14 @@
   background-color: #f8f8f8;
   color: #0b1320;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   width: 250px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.2s, box-shadow 0.2s;
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  
 }
 .pricing-card:hover {
   transform: translateY(-5px);
@@ -70,7 +73,21 @@
       #77ffd2,
       #77ffd2);;
 }
-
+.pricing-card::before {
+  border-radius: 16px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(135deg,
+      #77ffd2,
+      #18ffb2,
+      #77ffd2,
+      #77ffd2
+  );
+}
 /* Dark theme overrides for pricing cards */
 [data-theme='dark'] .pricing-card {
   background-color: #122028; /* slightly lighter than page background */
