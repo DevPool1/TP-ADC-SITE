@@ -79,3 +79,26 @@
 [data-theme='dark'] .pricing-card button:hover {
   background-color: #27965f;
 }
+/* ...existing code... */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  align-items: start;
+}
+
+.feature {
+  /* transform existing feature box into card */
+  padding: 1.2rem;
+  border-radius: 12px;
+  background: var(--ifm-color-page, #fff);
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.feature:hover { transform: translateY(-6px); box-shadow: var(--shadow-strong); }
+
+@media (max-width: 996px) {
+  .features { grid-template-columns: 1fr; }
+}
