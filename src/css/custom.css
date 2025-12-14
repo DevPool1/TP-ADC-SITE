@@ -64,7 +64,11 @@
   font-weight: bold;
 }
 .pricing-card button:hover {
-  background-color: #45a049;
+  background-color: linear-gradient(135deg,
+      #77ffd2,
+      #18ffb2,
+      #77ffd2,
+      #77ffd2);;
 }
 
 /* Dark theme overrides for pricing cards */
