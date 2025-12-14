@@ -16,7 +16,7 @@ const config = {
   themes: ['@docusaurus/theme-mermaid'],
   title: 'NutriApp',
   tagline: 'git push nos vegetais, git ignore nas gorduras',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon-source.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -164,6 +164,17 @@ const config = {
       metadata: [
         {name: 'keywords', content: 'nutrição, dieta, imc, saúde, app, gestão nutricional'},
         {name: 'twitter:card', content: 'summary_large_image'},
+        {name: 'apple-mobile-web-app-capable', content: 'yes'},
+      ],
+      headTags: [
+        {
+          tagName: 'link',
+          attributes: {
+            rel: 'apple-touch-icon',
+            sizes: '180x180',
+            href: '/img/apple-touch-icon.svg',
+          },
+        },
       ],
     }),
 };
