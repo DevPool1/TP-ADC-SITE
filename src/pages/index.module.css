@@ -27,13 +27,15 @@
 }
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 5rem 0; 
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+  color: white; 
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); 
   background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
+  animation: gradientShift 10s ease infinite;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 996px) {
@@ -49,9 +51,6 @@
   animation: fadeInUp 1s ease-out 0.5s both;
 }
 
-.heroBanner h1 {
-  animation: fadeInUp 0.8s ease-out both;
-}
 
 .heroBanner p {
   animation: fadeInUp 1s ease-out 0.2s both;
@@ -65,3 +64,10 @@
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
+.hero__title {
+  color: var(--ifm-color-primary-darkest);
+  font-weight: 800;
+  font-size: clamp(26px, 4vw, 36px);
+}
+
