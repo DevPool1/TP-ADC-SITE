@@ -95,6 +95,13 @@ th {
   letter-spacing: 0.08em;
   padding: 16px;
   border-bottom: 2px solid #a5b4fc;
+  background: linear-gradient(
+    135deg,
+    #77ffd2, /* Azul */
+    #18ffb2, /* Verde */
+    #77ffd2,  /* Roxo */
+    #77ffd2 /* Roxo */
+  )
 }
 
 
