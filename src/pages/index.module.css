@@ -82,7 +82,33 @@ table {
   border-collapse: separate;
   border-spacing: 0;
   margin: 2rem 0;
-  background-color: auto; /* Nota: verifica se 'auto' é o que queres, geralmente usa-se 'transparent' ou uma cor */
+  background-color: auto; 
   border-radius: 14px;
   overflow: hidden;
+}
+
+th {
+  color: #1e293b;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  padding: 16px;
+  border-bottom: 2px solid #a5b4fc;
+}
+
+
+td {
+  padding: 14px 16px;
+  font-size: 0.95rem;
+  color: auto;
+  background-color: auto;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.25s ease;
+}
+
+
+th:not(:first-child),
+td:not(:first-child) {
+  text-align: center;
 }
