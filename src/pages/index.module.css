@@ -134,12 +134,12 @@ td:first-child {
 }
 
 tr:hover td {
-  background-color: #0c356b;
+  background-color: #01291b;
 }
 
 tr:hover td:first-child {
-  background-color: #0c356b;
-  color: #1f46af;
+  background-color: #01291b;
+  color: #13c284;
 }
 
 
