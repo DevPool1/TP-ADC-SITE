@@ -23,9 +23,12 @@
 .carouselImage {
   width: 100%;
   height: auto;
+  border-radius: 12px;
   display: block;
   transition: opacity 0.3s ease;
 }
+
+.carouselImage:hover { transform: scale(1.02); }
 
 .counter {
   position: absolute;
