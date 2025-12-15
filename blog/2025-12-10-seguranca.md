@@ -32,4 +32,9 @@ Em vez de guardar o texto original, utilizamos um algoritmo de encriptação rob
 
 Este processo realiza o **Hashing** da password: transforma a tua senha numa sequência complexa de caracteres (o tal "puré") que é matematicamente impossível de reverter para a palavra original. Além disso, adicionamos um "Salt" (sal digital aleatório) para garantir que cada registo é único e indecifrável.
 
+### 🔮 Próximos Passos
+A segurança nunca dorme. No futuro, planeamos implementar:
+1.  Autenticação de Dois Fatores (2FA).
+2.  Validação de complexidade de passwords (mínimo 8 caracteres).
+
 Na Nutri App, a *privacidade vem sempre primeiro.* 🛡️
