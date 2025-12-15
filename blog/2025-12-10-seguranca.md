@@ -11,7 +11,7 @@ Quando te registas na nossa aplicação, prometemos uma coisa: **nunca guardamos
 
 Hoje explicamos como cozinhamos (ou melhor, encriptamos) os teus dados.
 
-### O Perigo do Texto Simples (Plain Text)
+### O Perigo do Texto Simples ⚠️
 
 Guardar passwords como `123456` na base de dados é como deixar a porta do frigorífico aberta: vai estragar tudo. Se houver uma fuga de dados, os hackers teriam acesso imediato a todas as contas.
 
