@@ -14,7 +14,7 @@ Hoje explicamos como cozinhamos (ou melhor, encriptamos) os teus dados.
 ### O Perigo do Texto Simples ⚠️
 
 Guardar passwords como `123456` na base de dados é como deixar a porta do frigorífico aberta: vai estragar tudo. Se houver uma fuga de dados, os hackers teriam acesso imediato a todas as contas.
-
+Cumprimos com todas as normas do RGPD.
 :::danger Nunca faças isto! ❌
 Exemplo de como **NÃO** se deve guardar um utilizador:
 
