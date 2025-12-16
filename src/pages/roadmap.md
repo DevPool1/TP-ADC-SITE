@@ -88,6 +88,8 @@ Acompanha o progresso e os planos futuros do projeto NutriApp. Transparência to
 - [ ] Integração com wearables (Fitbit, Apple Watch)
 - [ ] App mobile (React Native)
 
+[![](https://mermaid.ink/img/pako:eNqFUMtOwzAQ_JXVnkByIjtJm8eBS3tDIKFyoulhk5jEIokrx0EpVX-E3-HHcFLgyh7Gs7szY9lnLHUlMcO8n05lQ8Z6hbSU9-DKKttKyHFLQ1NoMhU8jtaoUume2gw21GqjaICN7oexU5Wj74MPDy4Abr4-W6s6PUAMWye6zfEaOnk0qQH2O1kzeJaGwdNIMygGOzk5oILBVneHq_501ed4X1KbI3DwvDsIOefXfUEG9oHgnEEQrhyKdOHBgsmC6TJ3_CezVb10Jr4s_8UDMqyNqjCzZpQMO2k6mls8z3E52kZ2MsfM0YrM2_zSi_McqX_Ruvu1GT3WDWav1A6uG48VWel-pjbU_U2N7CtpNnrsLWZpGi0hmJ1xwkyEKz8RYRTyOFmLMEgYntx0zf0oiHkYRDF3hwguDD-Wa7m_jlMRJ1ykcyWRuHwD-cyNTg?type=png)](https://mermaid.live/edit#pako:eNqFUMtOwzAQ_JXVnkByIjtJm8eBS3tDIKFyoulhk5jEIokrx0EpVX-E3-HHcFLgyh7Gs7szY9lnLHUlMcO8n05lQ8Z6hbSU9-DKKttKyHFLQ1NoMhU8jtaoUume2gw21GqjaICN7oexU5Wj74MPDy4Abr4-W6s6PUAMWye6zfEaOnk0qQH2O1kzeJaGwdNIMygGOzk5oILBVneHq_501ed4X1KbI3DwvDsIOefXfUEG9oHgnEEQrhyKdOHBgsmC6TJ3_CezVb10Jr4s_8UDMqyNqjCzZpQMO2k6mls8z3E52kZ2MsfM0YrM2_zSi_McqX_Ruvu1GT3WDWav1A6uG48VWel-pjbU_U2N7CtpNnrsLWZpGi0hmJ1xwkyEKz8RYRTyOFmLMEgYntx0zf0oiHkYRDF3hwguDD-Wa7m_jlMRJ1ykcyWRuHwD-cyNTg)
+
 ![](https://img.shields.io/badge/Progresso-0%25-lightgrey?style=flat-square)
 **Status:** ![](https://img.shields.io/badge/💡-Conceito-purple)
 **Data Estimada:** 2026+
