@@ -172,13 +172,20 @@
         <content type="html"><![CDATA[<p>Na Nutri App, levamos a segurança tão a sério como a contagem de macronutrientes.
 Quando te registas na nossa aplicação, prometemos uma coisa: <strong>nunca guardamos a tua password em texto simples.</strong></p>
 <p>Hoje explicamos como cozinhamos (ou melhor, encriptamos) os teus dados.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="o-perigo-do-texto-simples-plain-text">O Perigo do Texto Simples (Plain Text)<a href="https://devpool1.github.io/TP-ADC-SITE/blog/seguranca-passwords-hash#o-perigo-do-texto-simples-plain-text" class="hash-link" aria-label="Direct link to O Perigo do Texto Simples (Plain Text)" title="Direct link to O Perigo do Texto Simples (Plain Text)" translate="no">​</a></h3>
-<p>Guardar passwords como <code>123456</code> na base de dados é como deixar a porta do frigorífico aberta: vai estragar tudo. Se houver uma fuga de dados, os hackers teriam acesso imediato a todas as contas.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="o-perigo-do-texto-simples-️">O Perigo do Texto Simples ⚠️<a href="https://devpool1.github.io/TP-ADC-SITE/blog/seguranca-passwords-hash#o-perigo-do-texto-simples-%EF%B8%8F" class="hash-link" aria-label="Direct link to O Perigo do Texto Simples ⚠️" title="Direct link to O Perigo do Texto Simples ⚠️" translate="no">​</a></h3>
+<p>Guardar passwords como <code>123456</code> na base de dados é como deixar a porta do frigorífico aberta: vai estragar tudo. Se houver uma fuga de dados, os hackers teriam acesso imediato a todas as contas.
+Cumprimos com todas as normas do RGPD.</p>
 <div class="theme-admonition theme-admonition-danger admonition_xJq3 alert alert--danger"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"></path></svg></span>Nunca faças isto! ❌</div><div class="admonitionContent_BuS1"><p>Exemplo de como <strong>NÃO</strong> se deve guardar um utilizador:</p><div class="language-javascript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-javascript codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">const</span><span class="token plain"> user </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"> </span><span class="token literal-property property" style="color:#36acaa">username</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'andre'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token literal-property property" style="color:#36acaa">password</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'minhapasswordsecreta'</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">// Se alguém ler a base de dados, lê a password imediatamente.</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">db</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">save</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">user</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div></div></div>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="a-solução-salting--hashing-">A Solução: Salting &amp; Hashing 🧂<a href="https://devpool1.github.io/TP-ADC-SITE/blog/seguranca-passwords-hash#a-solu%C3%A7%C3%A3o-salting--hashing-" class="hash-link" aria-label="Direct link to A Solução: Salting &amp; Hashing 🧂" title="Direct link to A Solução: Salting &amp; Hashing 🧂" translate="no">​</a></h3>
 <p>Em vez de guardar o texto original, utilizamos um algoritmo de encriptação robusto chamado <strong>Bcrypt</strong>.</p>
-<p>Este processo realiza o <strong>Hashing</strong> da password: transforma a tua senha numa sequência complexa de caracteres (o tal "puré") que é matematicamente impossível de reverter para a palavra original. Além disso, adicionamos um "Salt" (sal digital) para garantir que cada registo é único e indecifrável.</p>
-<p>Na Nutri App, a privacidade vem sempre primeiro. 🛡️</p>]]></content>
+<p>Este processo realiza o <strong>Hashing</strong> da password: transforma a tua senha numa sequência complexa de caracteres (o tal "puré") que é matematicamente impossível de reverter para a palavra original. Além disso, adicionamos um "Salt" (sal digital aleatório) para garantir que cada registo é único e indecifrável.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-próximos-passos">🔮 Próximos Passos<a href="https://devpool1.github.io/TP-ADC-SITE/blog/seguranca-passwords-hash#-pr%C3%B3ximos-passos" class="hash-link" aria-label="Direct link to 🔮 Próximos Passos" title="Direct link to 🔮 Próximos Passos" translate="no">​</a></h3>
+<p>A segurança nunca dorme. No futuro, planeamos implementar:</p>
+<ol>
+<li class="">Autenticação de Dois Fatores (2FA).</li>
+<li class="">Validação de complexidade de passwords (mínimo 8 caracteres).</li>
+</ol>
+<p>Na Nutri App, a <em>privacidade vem sempre primeiro.</em> 🛡️</p>]]></content>
         <author>
             <name>André Nunes</name>
             <uri>https://github.com/a89979</uri>
@@ -186,6 +193,7 @@ Quando te registas na nossa aplicação, prometemos uma coisa: <strong>nunca gua
         <category label="Backend" term="Backend"/>
         <category label="Segurança" term="Segurança"/>
         <category label="Criptografia" term="Criptografia"/>
+        <category label="nodejs" term="nodejs"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[🍝 Como evitamos "Spaghetti Code" com Gitflow]]></title>
@@ -195,20 +203,41 @@ Quando te registas na nossa aplicação, prometemos uma coisa: <strong>nunca gua
         <summary type="html"><![CDATA[Ninguém gosta de esparguete misturado com código. Na equipa Nutri App, a organização do repositório é tão importante como a organização das refeições.]]></summary>
         <content type="html"><![CDATA[<p>Ninguém gosta de esparguete misturado com código. Na equipa Nutri App, a organização do repositório é tão importante como a organização das refeições.</p>
 <p>Hoje partilhamos como estamos a usar o <strong>Git</strong> para manter o projeto saudável.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="a-nossa-estratégia-de-ramos-branches">A nossa Estratégia de Ramos (Branches)<a href="https://devpool1.github.io/TP-ADC-SITE/blog/workflow-git#a-nossa-estrat%C3%A9gia-de-ramos-branches" class="hash-link" aria-label="Direct link to A nossa Estratégia de Ramos (Branches)" title="Direct link to A nossa Estratégia de Ramos (Branches)" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-as-nossas-ferramentas">🛠️ As nossas Ferramentas<a href="https://devpool1.github.io/TP-ADC-SITE/blog/workflow-git#%EF%B8%8F-as-nossas-ferramentas" class="hash-link" aria-label="Direct link to 🛠️ As nossas Ferramentas" title="Direct link to 🛠️ As nossas Ferramentas" translate="no">​</a></h3>
+<p>Para gerir este fluxo, utilizamos o essencial:</p>
+<ul>
+<li class=""><strong>VS Code:</strong> Com a integração nativa de Git.</li>
+<li class=""><strong>GitHub Issues:</strong> Para distribuir tarefas e organizar o Kanban.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-a-nossa-estratégia-de-ramos">🌿 A nossa Estratégia de Ramos<a href="https://devpool1.github.io/TP-ADC-SITE/blog/workflow-git#-a-nossa-estrat%C3%A9gia-de-ramos" class="hash-link" aria-label="Direct link to 🌿 A nossa Estratégia de Ramos" title="Direct link to 🌿 A nossa Estratégia de Ramos" translate="no">​</a></h3>
 <p>Para garantir que a <code>main</code> está sempre pronta para produção (livre de bugs e gorduras saturadas), adotámos um fluxo rigoroso:</p>
 <ol>
-<li class=""><strong>Main:</strong> Código sagrado. Só entra aqui via Pull Request aprovado.</li>
+<li class=""><strong>Main:</strong> Código sagrado. Só entra aqui via <strong>Pull Request</strong> aprovado.</li>
 <li class=""><strong>Feature/</strong>: Cada nova funcionalidade (ex: <code>feature/calculo-imc</code>) nasce num ramo isolado.</li>
 <li class=""><strong>Fix/</strong>: Para resolver bugs críticos que escaparam à dieta.</li>
 </ol>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="o-processo-de-code-review">O Processo de Code Review<a href="https://devpool1.github.io/TP-ADC-SITE/blog/workflow-git#o-processo-de-code-review" class="hash-link" aria-label="Direct link to O Processo de Code Review" title="Direct link to O Processo de Code Review" translate="no">​</a></h3>
 <p>Antes de qualquer código ser misturado (<code>merge</code>), ele passa por uma revisão. É como provar a comida antes de servir aos clientes. Nada entra na panela principal sem o "OK" de outro chef (developer).</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="o-que-verificamos-no-pr">O que verificamos no PR?<a href="https://devpool1.github.io/TP-ADC-SITE/blog/workflow-git#o-que-verificamos-no-pr" class="hash-link" aria-label="Direct link to O que verificamos no PR?" title="Direct link to O que verificamos no PR?" translate="no">​</a></h4>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->O código compila?</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Variáveis têm nomes decentes?</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Não há comentários inúteis?</li>
+</ul>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>Automação</div><div class="admonitionContent_BuS1"><p>Nos nossos Pull Requests, usamos palavras-chave como <code>Closes #29</code>.
+Isto faz com que o GitHub feche o Issue automaticamente quando o código é aceite. Mágico! 🪄</p></div></div>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="exemplo-prático">Exemplo Prático<a href="https://devpool1.github.io/TP-ADC-SITE/blog/workflow-git#exemplo-pr%C3%A1tico" class="hash-link" aria-label="Direct link to Exemplo Prático" title="Direct link to Exemplo Prático" translate="no">​</a></h3>
 <p>Aqui está o nosso fluxo habitual no terminal quando iniciamos uma tarefa:</p>
+<h1>Verificar status antes</h1>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"># 1. Atualizar a base</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git checkout main</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git pull</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># 2. Criar o ramo da funcionalidade</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git checkout -b feature/nova-funcionalidade</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># 3. Trabalhar e enviar</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git commit -m "feat: adiciona lógica de hidratação"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git push origin feature/nova-funcionalidade</span><br></span></code></pre></div></div>
 <div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>Cuidado com os Conflitos 🔥</div><div class="admonitionContent_BuS1"><p>Tal como na cozinha, por vezes dois chefs tentam mexer na mesma panela (ficheiro) ao mesmo tempo.
-Quando temos um <em>Merge Conflict</em>, não entramos em pânico: resolvemos em equipa via Discord e garantimos que nenhum código importante é "queimado".</p></div></div>]]></content>
+Quando temos um <em>Merge Conflict</em>, não entramos em pânico: resolvemos em equipa via Discord e garantimos que nenhum código importante é "queimado".</p></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-glossário-rápido">📖 Glossário Rápido<a href="https://devpool1.github.io/TP-ADC-SITE/blog/workflow-git#-gloss%C3%A1rio-r%C3%A1pido" class="hash-link" aria-label="Direct link to 📖 Glossário Rápido" title="Direct link to 📖 Glossário Rápido" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Commit:</strong> Uma "foto" do código naquele momento.</li>
+<li class=""><strong>Branch:</strong> Uma linha do tempo paralela.</li>
+<li class=""><strong>Merge:</strong> Juntar duas linhas do tempo.</li>
+</ul>]]></content>
         <author>
             <name>André Nunes</name>
             <uri>https://github.com/a89979</uri>
@@ -216,6 +245,7 @@ Quando temos um <em>Merge Conflict</em>, não entramos em pânico: resolvemos em
         <category label="Git" term="Git"/>
         <category label="Workflow" term="Workflow"/>
         <category label="Boas Práticas" term="Boas Práticas"/>
+        <category label="trabalho-em-equipa" term="trabalho-em-equipa"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[🥗 Hello World: O Início da Nutri App]]></title>
