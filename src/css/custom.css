@@ -35,25 +35,34 @@
   gap: 2rem;
   flex-wrap: wrap;
 }
+
 .pricing-card {
   background-color: #f8f8f8;
   color: #0b1320;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   width: 250px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
 }
+
 .pricing-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transform: translateY(-8px);
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: #18ffb2;
 }
+
 .pricing-price {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 1rem 0;
 }
+
 .pricing-card button {
   background-color: #4CAF50;
   color: white;
@@ -63,19 +72,72 @@
   cursor: pointer;
   font-weight: bold;
 }
+
 .pricing-card button:hover {
-  background-color: #45a049;
+  background-color: linear-gradient(135deg,
+      #77ffd2,
+      #18ffb2,
+      #77ffd2,
+      #77ffd2);
+  ;
 }
 
-/* Dark theme overrides for pricing cards */
+
 [data-theme='dark'] .pricing-card {
-  background-color: #122028; /* slightly lighter than page background */
-  color: #e6f3ef; /* light text for contrast */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+  background-color: #122028;
+  color: #e6f3ef;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
+
 [data-theme='dark'] .pricing-card button {
   background-color: #2ea06a;
 }
+
 [data-theme='dark'] .pricing-card button:hover {
   background-color: #27965f;
+}
+
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  align-items: start;
+}
+
+.feature {
+  padding: 1.2rem;
+  border-radius: 12px;
+  background: var(--ifm-color-page, #fff);
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.feature:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-strong);
+}
+
+@media (max-width: 996px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+article img,
+.theme-doc-markdown img {
+  border: 1px solid #06daff;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(30, 255, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+}
+
+
+[data-theme='dark'] article img {
+  border-color: linear-gradient(135deg,
+      #77ffd2,
+      #18ffb2,
+      #77ffd2,
+      #77ffd2)
 }
