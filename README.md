@@ -8,7 +8,7 @@
 
 ---
 
-## 🌐 [Ver Site Online](https://devpool1.github.io/tp-adc-site/) (Clica aqui!)
+## 🌐 [Ver Site Online](https://devpool1.github.io/TP-ADC-SITE/) (Clica aqui!)
 
 ---
 
