@@ -172,6 +172,13 @@ const config = {
       ],
       headTags: [
         {
+          tagName: 'meta',
+          attributes: {
+            'http-equiv': 'Content-Security-Policy',
+            content: "default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.gtranslate.net https://translate.google.com https://translate.googleapis.com; style-src 'self' 'unsafe-inline' https://cdn.gtranslate.net; img-src 'self' data: https:; frame-src 'self' https://translate.google.com;"
+          }
+        },
+        {
           tagName: 'link',
           attributes: {
             rel: 'apple-touch-icon',
