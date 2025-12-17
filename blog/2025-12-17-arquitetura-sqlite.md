@@ -19,3 +19,8 @@ Guarda os dados de login e as métricas corporais do utilizador.
 | `username` | TEXT | Único |
 | `password_hash` | TEXT | Encriptado |
 | `role` | TEXT | Default: 'user' |
+
+
+| `peso_kg` | REAL | Peso atual |
+| `altura_cm` | INTEGER | Altura em cm |
+| `objetivo_calorias` | INTEGER | Meta diária |
