@@ -31,4 +31,7 @@ O nosso catálogo nutricional. Cada alimento tem os seus macros definidos por po
 | `alimento_id` | INTEGER | ID Sequencial |
 | `nome` | TEXT | Nome único do prato |
 | `calorias` | INTEGER | Kcal totais |
+| `proteinas` | REAL | Gramas de proteína |
+| `hidratos` | REAL | Gramas de hidratos |
+| `gorduras` | REAL | Gramas de gordura |
 
