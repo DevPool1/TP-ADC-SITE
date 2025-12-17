@@ -63,3 +63,12 @@ erDiagram
         string data_registo
         real quantidade_gramas
     }
+```
+    
+### Como nos ligamos?
+Usamos a função `get_db_connection` para garantir que o ficheiro existe:
+```python
+def get_db_connection():
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row # Permite aceder colunas por nome
+    return conn
