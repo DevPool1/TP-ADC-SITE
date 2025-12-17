@@ -187,3 +187,9 @@ article img,
   background: transparent !important;
   box-shadow: none !important;       
 }
+
+
+.gtranslate_wrapper .gt_float_switcher .gt_options {
+  background-color: var(--ifm-navbar-background-color) !important;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+}
