@@ -84,8 +84,7 @@ No plano **Pro** e **Premium**, recebe sugestões automáticas de refeições ba
       <li>✅ Consultoria nutricional individual</li>
       <li>✅ Conteúdos exclusivos</li>
       <li>✅ Estatísticas avançadas</li>
-      <li>✅ Inserção de alimentos em lote</li>
-      <li>✅ Gestão de administradores</li>
+      <li>✅ Comunicação com a Equipa</li>
     </ul>
     <button onclick="alert('Plano Premium selecionado!')">Ir Premium</button>
   </div>
