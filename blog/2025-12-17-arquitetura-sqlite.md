@@ -35,3 +35,5 @@ O nosso catálogo nutricional. Cada alimento tem os seus macros definidos por po
 | `hidratos` | REAL | Gramas de hidratos |
 | `gorduras` | REAL | Gramas de gordura |
 
+### 📅 Tabela: registos_diarios
+A tabela de ligação que cruza "Quem comeu" com "O que comeu".
