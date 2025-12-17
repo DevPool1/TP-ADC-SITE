@@ -37,3 +37,10 @@ O nosso catálogo nutricional. Cada alimento tem os seus macros definidos por po
 
 ### 📅 Tabela: registos_diarios
 A tabela de ligação que cruza "Quem comeu" com "O que comeu".
+
+| Coluna | Tipo | Relação |
+| :--- | :--- | :--- |
+| `user_id` | INTEGER | FK -> users |
+| `alimento_id` | INTEGER | FK -> alimentos |
+| `quantidade_gramas`| REAL | Porção ingerida |
+
