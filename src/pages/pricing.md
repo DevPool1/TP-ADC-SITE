@@ -45,7 +45,7 @@ Veja como a nossa base de dados armazena informação nutricional detalhada:
 | Abacate | 160 | 2 | 8.5 | 15 | 100g |
 
 :::tip Dica Pro 💡
-No plano **Pro** e **Premium**, recebe sugestões automáticas de refeições balanceadas com base nestes valores!
+No plano **Pro** e **Premium**, recebe sugestões automáticas de refeições equilibradas com base nestes valores!
 :::
 
 ---
