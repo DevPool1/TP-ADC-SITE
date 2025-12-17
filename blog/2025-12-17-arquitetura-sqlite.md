@@ -81,7 +81,7 @@ def get_db_connection():
 ### Schema SQL
 O nosso script cria as tabelas automaticamente se não existirem:
 ```sql
-CREATE TABLE IF NOT EXISTS users (
+CREATE TABLE IF NOT EXISTS users ( -- Cria a tabela de utilizadores se ela não existir
     user_id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT UNIQUE NOT NULL,
     ...
