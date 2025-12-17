@@ -10,7 +10,7 @@ A Nutri App utiliza o motor **SQLite** para uma gestão de dados leve e eficient
 ### Porquê SQLite?
 Como a nossa aplicação é focada na simplicidade, usamos o `sqlite3` nativo do Python. O ficheiro da base de dados vive em `data/nutricao.db`.
 
-### 👤 Tabela: Users
+### 👤 Tabela: **Users**
 Guarda os dados de login e as métricas corporais do utilizador.
 
 | Coluna | Tipo | Notas |
@@ -23,7 +23,7 @@ Guarda os dados de login e as métricas corporais do utilizador.
 | `altura_cm` | INTEGER | Altura em cm |
 | `objetivo_calorias` | INTEGER | Meta diária |
 
-### 🍎 Tabela: Alimentos
+### 🍎 Tabela: **Alimentos**
 O nosso catálogo nutricional. Cada alimento tem os seus macros definidos por porção.
 
 | Coluna | Tipo | Descrição |
@@ -35,7 +35,7 @@ O nosso catálogo nutricional. Cada alimento tem os seus macros definidos por po
 | `hidratos` | REAL | Gramas de hidratos |
 | `gorduras` | REAL | Gramas de gordura |
 
-### 📅 Tabela: registos_diarios
+### 📅 Tabela: **registos_diarios**
 A tabela de ligação que cruza "Quem comeu" com "O que comeu".
 
 | Coluna | Tipo | Relação |
