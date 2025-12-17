@@ -201,3 +201,9 @@ article img,
 .gtranslate_wrapper .gt_float_switcher .gt_options a {
   color: var(--ifm-navbar-link-color) !important;
 }
+
+  
+.gtranslate_wrapper .gt_float_switcher .gt_options a:hover {
+  background: var(--ifm-menu-color-background-hover) !important;
+  color: var(--ifm-link-color) !important;
+}
