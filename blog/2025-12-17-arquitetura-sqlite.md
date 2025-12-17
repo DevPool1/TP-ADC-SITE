@@ -66,9 +66,15 @@ erDiagram
 ```
     
 ### Como nos ligamos?
-Usamos a função `get_db_connection` para garantir que o ficheiro existe:
+Usamos a função `get_db_connection` para garantir que a pasta de dados existe e ligar o modo de dicionários:
+
 ```python
 def get_db_connection():
+    os.makedirs(DATA_DIR, exist_ok=True) # Cria a pasta data/ se não existir
+
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row # Permite aceder colunas por nome
     return conn
+```
+
+
