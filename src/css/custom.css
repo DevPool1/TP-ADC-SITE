@@ -146,12 +146,20 @@ css
 .gtranslate_wrapper {
   display: flex;
   align-items: center;
-
+  
+    
+  justify-content: center;
   min-width: 100px; 
-  height: 100%;
+  
+  height: 100%;              /* Ocupa toda a altura da navbar */
+  margin-right: 100px;        /* Margem direita para não colar no ícone do GitHub */
+  min-width: 120px; 
+  position: relative;
+  z-index: 1000;         /* Reserva espaço para evitar "layout shift" */
 }
 
 
 .gt_float_switcher {
   z-index: 9999 !important;
 }
+

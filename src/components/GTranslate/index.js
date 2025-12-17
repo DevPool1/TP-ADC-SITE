@@ -7,7 +7,7 @@ export default function GTranslate() {
       "default_language": "pt",
       "languages": ["pt", "fr", "it", "es", "ro", "en"],
       "wrapper_selector": ".gtranslate_wrapper",
-      "switcher_horizontal_position": "right",
+      "switcher_horizontal_position": "inline",
       "switcher_vertical_position": "top",
 	  "url_structure": "none",
       "float_switcher_open_direction": "bottom",
