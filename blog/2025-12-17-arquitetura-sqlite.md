@@ -77,4 +77,12 @@ def get_db_connection():
     return conn
 ```
 
+### Schema SQL
+O nosso script cria as tabelas automaticamente se não existirem:
+```sql
+CREATE TABLE IF NOT EXISTS users (
+    user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT UNIQUE NOT NULL,
+    ...
+);
 
