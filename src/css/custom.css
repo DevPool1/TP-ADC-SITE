@@ -142,20 +142,17 @@ article img,
       #77ffd2)
 }
 
-css
+
 .gtranslate_wrapper {
+  position: relative;
   display: flex;
   align-items: center;
-  
-    
   justify-content: center;
-  min-width: 100px; 
-  
-  height: 100%;              /* Ocupa toda a altura da navbar */
-  margin-right: 100px;        /* Margem direita para não colar no ícone do GitHub */
-  min-width: 120px; 
-  position: relative;
-  z-index: 1000;         /* Reserva espaço para evitar "layout shift" */
+  min-width: 100px;
+  height: 100%;
+  margin-right: 100px;
+  min-width: 120px;
+  z-index: 1000;
 }
 
 
@@ -163,3 +160,11 @@ css
   z-index: 9999 !important;
 }
 
+.gtranslate_wrapper .gt_options {
+  position: absolute !important;
+  top: 45px !important;
+  right: 0 !important;
+  z-index: 999999 !important;
+  width: 200px !important;
+  min-width: 120px;
+}
