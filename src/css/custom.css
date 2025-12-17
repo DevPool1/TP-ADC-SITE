@@ -178,13 +178,12 @@ article img,
   width: 200px !important;
   min-width: 120px;
 }
-/* src/css/custom.css */
 
-/* Força transparência no wrapper que o script cria */
-.gtranslate_wrapper .gt_float_wrapper {
+.gtranslate_wrapper .gt_float_switcher .gt-selected {
   background: transparent !important;
   background-color: transparent !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  border: none !important;
+}
+.gtranslate_wrapper .gt_float_switcher {
+  background: transparent !important;
+  box-shadow: none !important;       
 }
