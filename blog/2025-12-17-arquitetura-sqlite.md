@@ -99,5 +99,9 @@ Temos uma função `popular_base_dados()` que insere automaticamente:
 * Peito de Frango 🍗
 * Arroz Branco 🍚
 
+:::info Ferramentas
+Usa a extensão "SQLite Viewer" no VS Code para veres os dados.
+:::
+
 ### Conclusão
 Esta estrutura simples permite-nos calcular as calorias totais de um utilizador com um simples `JOIN` entre as três tabelas.
