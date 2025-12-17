@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
 export default function GTranslate() {
+    
   useEffect(() => {
     
     window.gtranslateSettings = {
@@ -12,7 +13,7 @@ export default function GTranslate() {
 	  "url_structure": "none",
       "float_switcher_open_direction": "bottom",
       "native_language_names": true,
-      "switcher_horizontal_position": "inline"
+      "switcher_horizontal_position": "relative"
     };
     
     const script = document.createElement('script');
