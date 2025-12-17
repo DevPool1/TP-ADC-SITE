@@ -27,8 +27,7 @@ Escolha o plano que melhor se adapta às suas necessidades nutricionais.
 | Consultoria nutricional | ❌ | ❌ | ✅ |
 | Conteúdos exclusivos | ❌ | ❌ | ✅ |
 | Estatísticas avançadas | ❌ | ❌ | ✅ |
-| Gestão de administradores | ❌ | ❌ | ✅ |
-| Inserção em lote | ❌ | ❌ | ✅ |
+| Comunicação Direta com a Equipa | ❌ | ❌ | ✅ |
 
 ---
 
