@@ -76,6 +76,7 @@ def get_db_connection():
     conn.row_factory = sqlite3.Row # Permite aceder colunas por nome
     return conn
 ```
+> Usamos os.path.join para garantir que o caminho funciona tanto em Windows como em Mac/Linux.
 
 ### Schema SQL
 O nosso script cria as tabelas automaticamente se não existirem:
