@@ -9,3 +9,7 @@ A Nutri App utiliza o motor **SQLite** para uma gestão de dados leve e eficient
 
 ### Porquê SQLite?
 Como a nossa aplicação é focada na simplicidade, usamos o `sqlite3` nativo do Python. O ficheiro da base de dados vive em `data/nutricao.db`.
+
+### 👤 Tabela: Users
+Guarda os dados de login e as métricas corporais do utilizador.
+
