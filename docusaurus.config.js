@@ -116,46 +116,54 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Documentação',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Wiki & Manual',
                 to: '/docs/',
               },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'FAQ',
+                to: '/faq',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: 'Roadmap',
+                to: '/roadmap',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'Recursos',
             items: [
               {
                 label: 'Blog',
                 to: '/blog',
               },
               {
+                label: 'Tabela Nutricional',
+                to: '/nutrition-table',
+              },
+              {
+                label: 'Pricing',
+                to: '/pricing',
+              },
+            ],
+          },
+          {
+            title: 'Sobre & Contacto',
+            items: [
+              {
+                label: 'Sobre a Equipa',
+                to: '/about',
+              },
+              {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/DevPool1/TP-ADC-SITE',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} NutriApp, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} NutriApp - Projeto ADC. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
