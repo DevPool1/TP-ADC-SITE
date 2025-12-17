@@ -58,25 +58,3 @@ gitGraph
     merge develop tag: "v1.0.0"
 ```
 
-## Sequência de Autenticação (Exemplo)
-
-```mermaid
-sequenceDiagram
-    participant U as User
-    participant F as Frontend
-    participant B as Backend
-    participant DB as Database
-    
-    U->>F: Login (email, password)
-    F->>B: POST /auth/login
-    B->>DB: Query user by email
-    DB-->>B: User data + hashed password
-    B->>B: bcrypt.compare(password, hash)
-    alt Password válida
-        B-->>F: JWT Token
-        F-->>U: Redirect to Dashboard
-    else Password inválida
-        B-->>F: 401 Unauthorized
-        F-->>U: Erro: Credenciais inválidas
-    end
-```

@@ -8,7 +8,7 @@ description: Compare os planos e escolha o melhor para si
 Escolha o plano que melhor se adapta às suas necessidades nutricionais.
 
 ![GitHub](https://img.shields.io/badge/NutriApp-Premium-success?style=for-the-badge)
-![Version](https://img.shields.io/badge/version-1.1.1-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.6.0-blue?style=for-the-badge)
 ![Users](https://img.shields.io/badge/users-1000%2B-brightgreen?style=for-the-badge)
 
 ---
@@ -27,8 +27,7 @@ Escolha o plano que melhor se adapta às suas necessidades nutricionais.
 | Consultoria nutricional | ❌ | ❌ | ✅ |
 | Conteúdos exclusivos | ❌ | ❌ | ✅ |
 | Estatísticas avançadas | ❌ | ❌ | ✅ |
-| Gestão de administradores | ❌ | ❌ | ✅ |
-| Inserção em lote | ❌ | ❌ | ✅ |
+| Comunicação Direta com a Equipa | ❌ | ❌ | ✅ |
 
 ---
 
@@ -46,7 +45,7 @@ Veja como a nossa base de dados armazena informação nutricional detalhada:
 | Abacate | 160 | 2 | 8.5 | 15 | 100g |
 
 :::tip Dica Pro 💡
-No plano **Pro** e **Premium**, recebe sugestões automáticas de refeições balanceadas com base nestes valores!
+No plano **Pro** e **Premium**, recebe sugestões automáticas de refeições equilibradas com base nestes valores!
 :::
 
 ---
@@ -85,8 +84,7 @@ No plano **Pro** e **Premium**, recebe sugestões automáticas de refeições ba
       <li>✅ Consultoria nutricional individual</li>
       <li>✅ Conteúdos exclusivos</li>
       <li>✅ Estatísticas avançadas</li>
-      <li>✅ Inserção de alimentos em lote</li>
-      <li>✅ Gestão de administradores</li>
+      <li>✅ Comunicação com a Equipa</li>
     </ul>
     <button onclick="alert('Plano Premium selecionado!')">Ir Premium</button>
   </div>

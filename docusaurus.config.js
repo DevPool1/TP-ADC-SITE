@@ -40,12 +40,12 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
+  defaultLocale: 'pt', 
+  locales: ['pt']  
+},
 
   presets: [
-    [
+    [  
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
@@ -54,7 +54,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/DevPool1/TP-ADC-SITE',
         },
         blog: {
           showReadingTime: true,
@@ -65,7 +65,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/DevPool1/TP-ADC-SITE',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -106,6 +106,10 @@ const config = {
           { to: '/pricing', label: 'Pricing', position: 'left' },
           { to: '/faq', label: 'FAQ', position: 'left' },
           {
+            type: 'custom-gtranslate',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/DevPool1/TP-ADC-SITE',
             label: 'GitHub',
             position: 'right',
@@ -116,46 +120,54 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Documentação',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Wiki & Manual',
                 to: '/docs/',
               },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'FAQ',
+                to: '/faq',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: 'Roadmap',
+                to: '/roadmap',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'Recursos',
             items: [
               {
                 label: 'Blog',
                 to: '/blog',
               },
               {
+                label: 'Tabela Nutricional',
+                to: '/nutrition-table',
+              },
+              {
+                label: 'Pricing',
+                to: '/pricing',
+              },
+            ],
+          },
+          {
+            title: 'Sobre & Contacto',
+            items: [
+              {
+                label: 'Sobre a Equipa',
+                to: '/about',
+              },
+              {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/DevPool1/TP-ADC-SITE',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} NutriApp, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} NutriApp - Projeto ADC. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
@@ -168,11 +180,29 @@ const config = {
       ],
       headTags: [
         {
+          tagName: 'meta',
+          attributes: {
+            'http-equiv': 'Content-Security-Policy',
+            content: "default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.gtranslate.net https://translate.google.com https://translate.googleapis.com; style-src 'self' 'unsafe-inline' https://cdn.gtranslate.net; img-src 'self' data: https:; frame-src 'self' https://translate.google.com;"
+          }
+        },
+        {
           tagName: 'link',
           attributes: {
             rel: 'apple-touch-icon',
             sizes: '180x180',
             href: '/img/apple-touch-icon.svg',
+          },
+        },
+        {
+          tagName: 'script',
+          innerHTML: `window.gtranslateSettings = {"default_language":"pt","languages":["pt","fr","it","es","ro","en"],"wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"right","switcher_vertical_position":"top","float_switcher_open_direction":"bottom"}`
+        },
+        {
+          tagName: 'script',
+          attributes: {
+            src: 'https://cdn.gtranslate.net/widgets/latest/float.js',
+            defer: 'defer',
           },
         },
       ],

@@ -8,7 +8,7 @@ description: Plano de desenvolvimento e features futuras do NutriApp
 Acompanha o progresso e os planos futuros do projeto NutriApp. Transparência total sobre o que já foi feito e o que vem a seguir!
 
 ![](https://img.shields.io/badge/Status-Em%20Desenvolvimento-blue?style=for-the-badge)
-![](https://img.shields.io/badge/Vers%C3%A3o%20Atual-v1.1.1-success?style=for-the-badge)
+![](https://img.shields.io/badge/Vers%C3%A3o%20Atual-v1.6.0-success?style=for-the-badge)
 ![](https://img.shields.io/github/contributors/DevPool1/TP-ADC-SITE?style=for-the-badge)
 
 ---
@@ -46,8 +46,8 @@ Acompanha o progresso e os planos futuros do projeto NutriApp. Transparência to
 - [x] Suporte para diagramas Mermaid ![](https://img.shields.io/badge/NEW-2025-red)
 - [x] Animações CSS no Hero Section ![](https://img.shields.io/badge/NEW-2025-red)
 - [x] Base de Dados Nutricional ![](https://img.shields.io/badge/NEW-2025-red)
-- [ ] Galeria de screenshots da aplicação
-- [ ] Página de Testemunhos de utilizadores
+- [x] Galeria de screenshots da aplicação
+- [x] Página de Testemunhos de utilizadores
 - [ ] Vídeo demo da aplicação
 
 ![](https://img.shields.io/badge/Progresso-85%25-yellow?style=flat-square)
@@ -122,7 +122,7 @@ timeline
     2025-12-04 : v1.0.0 Released
               : Site no ar
               : Blog funcional
-    2025-12-10 : v1.1.0 
+    2025-12-10 : v1.6.0 
               : Mermaid diagrams
               : FAQ & Tabelas
     2026-01 : v2.0.0 (Planeado)
