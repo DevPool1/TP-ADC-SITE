@@ -13,3 +13,9 @@ Como a nossa aplicação é focada na simplicidade, usamos o `sqlite3` nativo do
 ### 👤 Tabela: Users
 Guarda os dados de login e as métricas corporais do utilizador.
 
+| Coluna | Tipo | Notas |
+| :--- | :--- | :--- |
+| `user_id` | INTEGER | Primary Key (Auto) |
+| `username` | TEXT | Único |
+| `password_hash` | TEXT | Encriptado |
+| `role` | TEXT | Default: 'user' |
