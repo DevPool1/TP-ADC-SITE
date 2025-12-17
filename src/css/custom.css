@@ -143,7 +143,9 @@ article img,
 }
 
 
+
 .gtranslate_wrapper {
+
   position: relative;
   display: flex;
   align-items: center;
@@ -159,7 +161,6 @@ article img,
   margin: 0;
   padding: 0;
   margin-right: 10px;
-
 }
 
 
@@ -168,11 +169,22 @@ article img,
 }
 
 .gtranslate_wrapper .gt_options {
-  position: static !important;
+  
+  position: absolute !important;
   top: 45px !important;
   right: 0  !important;
   left: 0.20px !important;
   z-index: 999999 !important;
   width: 200px !important;
   min-width: 120px;
+}
+/* src/css/custom.css */
+
+/* Força transparência no wrapper que o script cria */
+.gtranslate_wrapper .gt_float_wrapper {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  border: none !important;
 }

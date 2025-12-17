@@ -30,7 +30,7 @@ export default function GTranslate() {
   }, []);
 
   return (
-    // Importante: Adicionei um estilo inline temporário para garantir que a div tem dimensão
+   
     <div className="gtranslate_wrapper" style={{minWidth: '100px', height: '100%'}}></div>
   );
 }
