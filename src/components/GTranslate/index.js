@@ -10,7 +10,8 @@ export default function GTranslate() {
       "switcher_horizontal_position": "right",
       "switcher_vertical_position": "top",
 	  "url_structure": "none",
-      "float_switcher_open_direction": "bottom"
+      "float_switcher_open_direction": "bottom",
+      "native_language_names": true
     };
     
     const script = document.createElement('script');
