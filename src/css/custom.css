@@ -141,3 +141,17 @@ article img,
       #77ffd2,
       #77ffd2)
 }
+
+css
+.gtranslate_wrapper {
+  display: flex;
+  align-items: center;
+
+  min-width: 100px; 
+  height: 100%;
+}
+
+
+.gt_float_switcher {
+  z-index: 9999 !important;
+}
