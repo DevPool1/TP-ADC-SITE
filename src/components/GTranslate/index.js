@@ -3,7 +3,10 @@ import React, { useEffect } from 'react';
 export default function GTranslate() {
     
   useEffect(() => {
-    
+    if (!document.cookie.split(';').some((item) => item.trim().startsWith('googtrans='))) {
+      
+      document.cookie = "googtrans=/pt/pt; path=/; domain=" + document.domain;
+    }
     window.gtranslateSettings = {
       "default_language": "pt",
       "languages": ["pt", "fr", "it", "es", "ro", "en"],
