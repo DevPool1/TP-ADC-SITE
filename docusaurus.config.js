@@ -179,6 +179,17 @@ const config = {
             href: '/img/apple-touch-icon.svg',
           },
         },
+        {
+          tagName: 'script',
+          innerHTML: `window.gtranslateSettings = {"default_language":"pt","languages":["pt","fr","it","es","ro","en"],"wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"right","switcher_vertical_position":"top","float_switcher_open_direction":"bottom"}`
+        },
+        {
+          tagName: 'script',
+          attributes: {
+            src: 'https://cdn.gtranslate.net/widgets/latest/float.js',
+            defer: 'defer',
+          },
+        },
       ],
     }),
 };
