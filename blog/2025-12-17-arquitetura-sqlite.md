@@ -1,6 +1,6 @@
 ---
 slug: arquitetura-sqlite
-title: 🗄️ Ingredientes e Tabelas: A BD da Nutri App
+title: "🗄️ Ingredientes e Tabelas: A BD da Nutri App"
 authors: [andre]
 tags: [backend, sqlite, python]
 date: 2025-12-17
