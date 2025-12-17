@@ -193,3 +193,7 @@ article img,
   background-color: var(--ifm-navbar-background-color) !important;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
 }
+
+.gtranslate_wrapper .gt_float_switcher .gt-selected .gt-current-lang {
+  color: var(--ifm-navbar-link-color) !important;
+}
