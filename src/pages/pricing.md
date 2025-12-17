@@ -8,7 +8,7 @@ description: Compare os planos e escolha o melhor para si
 Escolha o plano que melhor se adapta às suas necessidades nutricionais.
 
 ![GitHub](https://img.shields.io/badge/NutriApp-Premium-success?style=for-the-badge)
-![Version](https://img.shields.io/badge/version-1.1.1-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.6.0-blue?style=for-the-badge)
 ![Users](https://img.shields.io/badge/users-1000%2B-brightgreen?style=for-the-badge)
 
 ---
