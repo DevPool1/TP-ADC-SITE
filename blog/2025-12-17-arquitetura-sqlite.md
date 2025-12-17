@@ -85,4 +85,5 @@ CREATE TABLE IF NOT EXISTS users (
     username TEXT UNIQUE NOT NULL,
     ...
 );
+```
 
