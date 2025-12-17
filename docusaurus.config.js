@@ -106,6 +106,10 @@ const config = {
           { to: '/pricing', label: 'Pricing', position: 'left' },
           { to: '/faq', label: 'FAQ', position: 'left' },
           {
+            type: 'custom-gtranslate',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/DevPool1/TP-ADC-SITE',
             label: 'GitHub',
             position: 'right',
