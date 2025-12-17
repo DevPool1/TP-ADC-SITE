@@ -57,3 +57,9 @@ erDiagram
         string nome
         int calorias
     }
+    USERS ||--o{ REGISTOS_DIARIOS : "regista"
+    ALIMENTOS ||--o{ REGISTOS_DIARIOS : "contém"
+    REGISTOS_DIARIOS {
+        string data_registo
+        real quantidade_gramas
+    }
