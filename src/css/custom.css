@@ -191,7 +191,8 @@ article img,
 
 .gtranslate_wrapper .gt_float_switcher .gt_options {
   background-color: var(--ifm-navbar-background-color) !important;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+   
 }
 
 .gtranslate_wrapper .gt_float_switcher .gt-selected .gt-current-lang {
@@ -202,8 +203,18 @@ article img,
   color: var(--ifm-navbar-link-color) !important;
 }
 
-  
+
 .gtranslate_wrapper .gt_float_switcher .gt_options a:hover {
   background: var(--ifm-menu-color-background-hover) !important;
   color: var(--ifm-link-color) !important;
+}
+
+.gtranslate_wrapper .gt_float_switcher .gt_options {
+  border-radius: 8px !important; 
+  overflow: hidden !important; 
+  margin-top: 5px !important;
+}
+
+.gtranslate_wrapper .gt_float_switcher {
+  border-radius: 8px !important;
 }
