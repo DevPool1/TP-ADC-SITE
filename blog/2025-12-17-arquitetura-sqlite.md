@@ -87,6 +87,7 @@ CREATE TABLE IF NOT EXISTS users (
 );
 ```
 
+
 :::warning Datas em SQLite
 Como o SQLite não tem tipo `DATE` nativo, armazenamos a `data_registo` como **TEXT** (ISO 8601).
 :::
