@@ -44,3 +44,16 @@ A tabela de ligação que cruza "Quem comeu" com "O que comeu".
 | `alimento_id` | INTEGER | FK -> alimentos |
 | `quantidade_gramas`| REAL | Porção ingerida |
 
+### Diagrama ER
+```mermaid
+erDiagram
+    USERS {
+        int user_id
+        string username
+        real peso_kg
+    }
+    ALIMENTOS {
+        int alimento_id
+        string nome
+        int calorias
+    }
