@@ -97,3 +97,6 @@ Temos uma função `popular_base_dados()` que insere automaticamente:
 * Maçã 🍎
 * Peito de Frango 🍗
 * Arroz Branco 🍚
+
+### Conclusão
+Esta estrutura simples permite-nos calcular as calorias totais de um utilizador com um simples `JOIN` entre as três tabelas.
