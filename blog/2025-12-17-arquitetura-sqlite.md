@@ -91,3 +91,9 @@ CREATE TABLE IF NOT EXISTS users (
 :::warning Datas em SQLite
 Como o SQLite não tem tipo `DATE` nativo, armazenamos a `data_registo` como **TEXT** (ISO 8601).
 :::
+
+### Seeding (Dados Iniciais)
+Temos uma função `popular_base_dados()` que insere automaticamente:
+* Maçã 🍎
+* Peito de Frango 🍗
+* Arroz Branco 🍚
